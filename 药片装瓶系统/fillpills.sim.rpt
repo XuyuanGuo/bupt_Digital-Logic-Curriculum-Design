@@ -1,0 +1,692 @@
+Simulator report for fillpills
+Fri May 19 11:30:49 2023
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------+
+; Simulator Summary                             ;
++-----------------------------+-----------------+
+; Type                        ; Value           ;
++-----------------------------+-----------------+
+; Simulation Start Time       ; 0 ps            ;
+; Simulation End Time         ; 1.0 us          ;
+; Simulation Netlist Size     ; 195 nodes       ;
+; Simulation Coverage         ;       0.60 %    ;
+; Total Number of Transitions ; 397             ;
+; Simulation Breakpoints      ; 0               ;
+; Family                      ; MAX7000S        ;
+; Device                      ; EPM7128SLC84-15 ;
++-----------------------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.60 % ;
+; Total nodes checked                                 ; 195          ;
+; Total output ports checked                          ; 168          ;
+; Total output ports with complete 1/0-value coverage ; 1            ;
+; Total output ports with no 1/0-value coverage       ; 167          ;
+; Total output ports with no 1-value coverage         ; 167          ;
+; Total output ports with no 0-value coverage         ; 167          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-----------------------------------------------------------+
+; Complete 1/0-Value Coverage                               ;
++----------------+-----------------------+------------------+
+; Node Name      ; Output Port Name      ; Output Port Type ;
++----------------+-----------------------+------------------+
+; |fillpills|clk ; |fillpills|clk~corein ; dataout          ;
++----------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                   ;
++--------------------------------------------+--------------------------------------------+------------------+
+; Node Name                                  ; Output Port Name                           ; Output Port Type ;
++--------------------------------------------+--------------------------------------------+------------------+
+; |fillpills|counter_10:cnt_tpo|cnt_l[0]     ; |fillpills|counter_10:cnt_tpo|cnt_l[0]     ; dataout          ;
+; |fillpills|error~9                         ; |fillpills|error~9                         ; dataout          ;
+; |fillpills|counter_10:cnt_tpo|cnt_l[2]     ; |fillpills|counter_10:cnt_tpo|cnt_l[2]     ; dataout          ;
+; |fillpills|counter_10:cnt_cpt|cnt_l[2]     ; |fillpills|counter_10:cnt_cpt|cnt_l[2]     ; dataout          ;
+; |fillpills|Equal1~16                       ; |fillpills|Equal1~16                       ; dataout          ;
+; |fillpills|counter_10:cnt_bt|cnt_l[2]      ; |fillpills|counter_10:cnt_bt|cnt_l[2]      ; dataout          ;
+; |fillpills|Equal2~4                        ; |fillpills|Equal2~4                        ; dataout          ;
+; |fillpills|Equal2~8                        ; |fillpills|Equal2~8                        ; dataout          ;
+; |fillpills|Equal2~12                       ; |fillpills|Equal2~12                       ; dataout          ;
+; |fillpills|Equal2~16                       ; |fillpills|Equal2~16                       ; dataout          ;
+; |fillpills|Equal3~4                        ; |fillpills|Equal3~4                        ; dataout          ;
+; |fillpills|Equal3~8                        ; |fillpills|Equal3~8                        ; dataout          ;
+; |fillpills|Equal3~12                       ; |fillpills|Equal3~12                       ; dataout          ;
+; |fillpills|Equal3~16                       ; |fillpills|Equal3~16                       ; dataout          ;
+; |fillpills|lg4~27                          ; |fillpills|lg4~27                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpt|cnt_l[3]     ; |fillpills|counter_10:cnt_cpt|cnt_l[3]     ; dataout          ;
+; |fillpills|counter_10:cnt_bt|cnt_l[3]      ; |fillpills|counter_10:cnt_bt|cnt_l[3]      ; dataout          ;
+; |fillpills|counter_10:cnt_tpo|cnt_l[1]     ; |fillpills|counter_10:cnt_tpo|cnt_l[1]     ; dataout          ;
+; |fillpills|counter_10:cnt_tpt|cnt_l[0]     ; |fillpills|counter_10:cnt_tpt|cnt_l[0]     ; dataout          ;
+; |fillpills|lg4~31                          ; |fillpills|lg4~31                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpt|cnt_l[1]     ; |fillpills|counter_10:cnt_cpt|cnt_l[1]     ; dataout          ;
+; |fillpills|counter_10:cnt_bt|cnt_l[1]      ; |fillpills|counter_10:cnt_bt|cnt_l[1]      ; dataout          ;
+; |fillpills|counter_10:cnt_tpt|cnt_l[2]     ; |fillpills|counter_10:cnt_tpt|cnt_l[2]     ; dataout          ;
+; |fillpills|lg4~35                          ; |fillpills|lg4~35                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpo|co           ; |fillpills|counter_10:cnt_cpo|co           ; dataout          ;
+; |fillpills|counter_10:cnt_cpt|cnt_l[0]     ; |fillpills|counter_10:cnt_cpt|cnt_l[0]     ; dataout          ;
+; |fillpills|counter_10:cnt_cpo|cnt_l[2]     ; |fillpills|counter_10:cnt_cpo|cnt_l[2]     ; dataout          ;
+; |fillpills|counter_10:cnt_tpt|cnt_l[1]     ; |fillpills|counter_10:cnt_tpt|cnt_l[1]     ; dataout          ;
+; |fillpills|counter_10:cnt_tph|cnt_l[0]     ; |fillpills|counter_10:cnt_tph|cnt_l[0]     ; dataout          ;
+; |fillpills|lg5~27                          ; |fillpills|lg5~27                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpo|cnt_l[3]     ; |fillpills|counter_10:cnt_cpo|cnt_l[3]     ; dataout          ;
+; |fillpills|lg6~27                          ; |fillpills|lg6~27                          ; dataout          ;
+; |fillpills|counter_10:cnt_tph|cnt_l[2]     ; |fillpills|counter_10:cnt_tph|cnt_l[2]     ; dataout          ;
+; |fillpills|lg5~31                          ; |fillpills|lg5~31                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpo|cnt_l[1]     ; |fillpills|counter_10:cnt_cpo|cnt_l[1]     ; dataout          ;
+; |fillpills|lg6~31                          ; |fillpills|lg6~31                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpo|cnt_l[0]     ; |fillpills|counter_10:cnt_cpo|cnt_l[0]     ; dataout          ;
+; |fillpills|lg5~35                          ; |fillpills|lg5~35                          ; dataout          ;
+; |fillpills|counter_10:cnt_bo|co            ; |fillpills|counter_10:cnt_bo|co            ; dataout          ;
+; |fillpills|counter_10:cnt_bt|cnt_l[0]      ; |fillpills|counter_10:cnt_bt|cnt_l[0]      ; dataout          ;
+; |fillpills|lg5~39                          ; |fillpills|lg5~39                          ; dataout          ;
+; |fillpills|lg6~35                          ; |fillpills|lg6~35                          ; dataout          ;
+; |fillpills|counter_10:cnt_tph|cnt_l[1]     ; |fillpills|counter_10:cnt_tph|cnt_l[1]     ; dataout          ;
+; |fillpills|counter_10:cnt_bo|cnt_l[2]      ; |fillpills|counter_10:cnt_bo|cnt_l[2]      ; dataout          ;
+; |fillpills|lg4~39                          ; |fillpills|lg4~39                          ; dataout          ;
+; |fillpills|lg6~39                          ; |fillpills|lg6~39                          ; dataout          ;
+; |fillpills|counter_10:cnt_bo|cnt_l[3]      ; |fillpills|counter_10:cnt_bo|cnt_l[3]      ; dataout          ;
+; |fillpills|counter_10:cnt_bo|cnt_l[1]      ; |fillpills|counter_10:cnt_bo|cnt_l[1]      ; dataout          ;
+; |fillpills|counter_10:cnt_bo|cnt_l[0]      ; |fillpills|counter_10:cnt_bo|cnt_l[0]      ; dataout          ;
+; |fillpills|counter_10:cnt_tpo|cnt_l[3]~37  ; |fillpills|counter_10:cnt_tpo|cnt_l[3]~37  ; pexpout          ;
+; |fillpills|counter_10:cnt_cpt|cnt_l[3]~37  ; |fillpills|counter_10:cnt_cpt|cnt_l[3]~37  ; pexpout          ;
+; |fillpills|counter_10:cnt_bt|cnt_l[3]~37   ; |fillpills|counter_10:cnt_bt|cnt_l[3]~37   ; pexpout          ;
+; |fillpills|counter_10:cnt_cpo|co~11        ; |fillpills|counter_10:cnt_cpo|co~11        ; pexpout          ;
+; |fillpills|counter_10:cnt_tpt|cnt_l[3]~37  ; |fillpills|counter_10:cnt_tpt|cnt_l[3]~37  ; pexpout          ;
+; |fillpills|counter_10:cnt_cpo|cnt_l[3]~37  ; |fillpills|counter_10:cnt_cpo|cnt_l[3]~37  ; pexpout          ;
+; |fillpills|counter_10:cnt_tph|cnt_l[3]~37  ; |fillpills|counter_10:cnt_tph|cnt_l[3]~37  ; pexpout          ;
+; |fillpills|counter_10:cnt_bo|co~11         ; |fillpills|counter_10:cnt_bo|co~11         ; pexpout          ;
+; |fillpills|counter_10:cnt_bo|cnt_l[3]~37   ; |fillpills|counter_10:cnt_bo|cnt_l[3]~37   ; pexpout          ;
+; |fillpills|~VCC~0                          ; |fillpills|~VCC~0                          ; dataout          ;
+; |fillpills|~VCC~1                          ; |fillpills|~VCC~1                          ; dataout          ;
+; |fillpills|~VCC~2                          ; |fillpills|~VCC~2                          ; dataout          ;
+; |fillpills|~VCC~3                          ; |fillpills|~VCC~3                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpo|Equal0~2sexp ; |fillpills|counter_10:cnt_cpo|Equal0~2sexp ; dataout          ;
+; |fillpills|counter_10:cnt_bo|Equal0~2sexp  ; |fillpills|counter_10:cnt_bo|Equal0~2sexp  ; dataout          ;
+; |fillpills|Equal0~4sexp1                   ; |fillpills|Equal0~4sexp1                   ; dataout          ;
+; |fillpills|Equal0~4sexp2                   ; |fillpills|Equal0~4sexp2                   ; dataout          ;
+; |fillpills|Equal0~8sexp1                   ; |fillpills|Equal0~8sexp1                   ; dataout          ;
+; |fillpills|Equal0~8sexp2                   ; |fillpills|Equal0~8sexp2                   ; dataout          ;
+; |fillpills|Equal0~12sexp1                  ; |fillpills|Equal0~12sexp1                  ; dataout          ;
+; |fillpills|Equal0~12sexp2                  ; |fillpills|Equal0~12sexp2                  ; dataout          ;
+; |fillpills|Equal0~16sexp1                  ; |fillpills|Equal0~16sexp1                  ; dataout          ;
+; |fillpills|Equal0~16sexp2                  ; |fillpills|Equal0~16sexp2                  ; dataout          ;
+; |fillpills|Equal1~4sexp1                   ; |fillpills|Equal1~4sexp1                   ; dataout          ;
+; |fillpills|Equal1~4sexp2                   ; |fillpills|Equal1~4sexp2                   ; dataout          ;
+; |fillpills|Equal1~8sexp1                   ; |fillpills|Equal1~8sexp1                   ; dataout          ;
+; |fillpills|Equal1~8sexp2                   ; |fillpills|Equal1~8sexp2                   ; dataout          ;
+; |fillpills|Equal1~12sexp1                  ; |fillpills|Equal1~12sexp1                  ; dataout          ;
+; |fillpills|Equal1~12sexp2                  ; |fillpills|Equal1~12sexp2                  ; dataout          ;
+; |fillpills|input[0]                        ; |fillpills|input[0]~corein                 ; dataout          ;
+; |fillpills|input[1]                        ; |fillpills|input[1]~corein                 ; dataout          ;
+; |fillpills|input[2]                        ; |fillpills|input[2]~corein                 ; dataout          ;
+; |fillpills|input[3]                        ; |fillpills|input[3]~corein                 ; dataout          ;
+; |fillpills|input_control[0]                ; |fillpills|input_control[0]~corein         ; dataout          ;
+; |fillpills|input_control[1]                ; |fillpills|input_control[1]~corein         ; dataout          ;
+; |fillpills|mode                            ; |fillpills|mode~corein                     ; dataout          ;
+; |fillpills|working                         ; |fillpills|working~corein                  ; dataout          ;
+; |fillpills|display_mode                    ; |fillpills|display_mode~corein             ; dataout          ;
+; |fillpills|clr                             ; |fillpills|clr~corein                      ; dataout          ;
+; |fillpills|qd                              ; |fillpills|qd~corein                       ; dataout          ;
+; |fillpills|lg2[0]                          ; |fillpills|lg2[0]                          ; padio            ;
+; |fillpills|lg2[1]                          ; |fillpills|lg2[1]                          ; padio            ;
+; |fillpills|lg2[2]                          ; |fillpills|lg2[2]                          ; padio            ;
+; |fillpills|lg2[3]                          ; |fillpills|lg2[3]                          ; padio            ;
+; |fillpills|red_light                       ; |fillpills|red_light                       ; padio            ;
+; |fillpills|green_light                     ; |fillpills|green_light                     ; padio            ;
+; |fillpills|lg4[2]                          ; |fillpills|lg4[2]                          ; padio            ;
+; |fillpills|lg4[3]                          ; |fillpills|lg4[3]                          ; padio            ;
+; |fillpills|lg4[1]                          ; |fillpills|lg4[1]                          ; padio            ;
+; |fillpills|lg5[2]                          ; |fillpills|lg5[2]                          ; padio            ;
+; |fillpills|lg6[0]                          ; |fillpills|lg6[0]                          ; padio            ;
+; |fillpills|lg5[3]                          ; |fillpills|lg5[3]                          ; padio            ;
+; |fillpills|lg6[2]                          ; |fillpills|lg6[2]                          ; padio            ;
+; |fillpills|lg5[1]                          ; |fillpills|lg5[1]                          ; padio            ;
+; |fillpills|lg5[0]                          ; |fillpills|lg5[0]                          ; padio            ;
+; |fillpills|lg6[3]                          ; |fillpills|lg6[3]                          ; padio            ;
+; |fillpills|lg4[0]                          ; |fillpills|lg4[0]                          ; padio            ;
+; |fillpills|lg6[1]                          ; |fillpills|lg6[1]                          ; padio            ;
+; |fillpills|lg3[2]                          ; |fillpills|lg3[2]                          ; padio            ;
+; |fillpills|lg3[3]                          ; |fillpills|lg3[3]                          ; padio            ;
+; |fillpills|lg3[1]                          ; |fillpills|lg3[1]                          ; padio            ;
+; |fillpills|lg3[0]                          ; |fillpills|lg3[0]                          ; padio            ;
+; |fillpills|Equal0~20                       ; |fillpills|Equal0~20                       ; dataout          ;
+; |fillpills|Equal0~21                       ; |fillpills|Equal0~21                       ; dataout          ;
+; |fillpills|Equal0~22                       ; |fillpills|Equal0~22                       ; dataout          ;
+; |fillpills|Equal0~23                       ; |fillpills|Equal0~23                       ; dataout          ;
+; |fillpills|Equal0~24                       ; |fillpills|Equal0~24                       ; dataout          ;
+; |fillpills|Equal0~25                       ; |fillpills|Equal0~25                       ; dataout          ;
+; |fillpills|Equal0~26                       ; |fillpills|Equal0~26                       ; dataout          ;
+; |fillpills|Equal0~27                       ; |fillpills|Equal0~27                       ; dataout          ;
+; |fillpills|Equal1~20                       ; |fillpills|Equal1~20                       ; dataout          ;
+; |fillpills|Equal1~21                       ; |fillpills|Equal1~21                       ; dataout          ;
+; |fillpills|Equal1~22                       ; |fillpills|Equal1~22                       ; dataout          ;
+; |fillpills|Equal1~23                       ; |fillpills|Equal1~23                       ; dataout          ;
+; |fillpills|Equal1~24                       ; |fillpills|Equal1~24                       ; dataout          ;
+; |fillpills|Equal1~25                       ; |fillpills|Equal1~25                       ; dataout          ;
+; |fillpills|Equal0~28                       ; |fillpills|Equal0~28                       ; dataout          ;
+; |fillpills|Equal0~29                       ; |fillpills|Equal0~29                       ; dataout          ;
+; |fillpills|Equal0~30                       ; |fillpills|Equal0~30                       ; dataout          ;
+; |fillpills|Equal0~31                       ; |fillpills|Equal0~31                       ; dataout          ;
+; |fillpills|Equal0~32                       ; |fillpills|Equal0~32                       ; dataout          ;
+; |fillpills|Equal0~33                       ; |fillpills|Equal0~33                       ; dataout          ;
+; |fillpills|Equal0~34                       ; |fillpills|Equal0~34                       ; dataout          ;
+; |fillpills|Equal0~35                       ; |fillpills|Equal0~35                       ; dataout          ;
+; |fillpills|Equal1~26                       ; |fillpills|Equal1~26                       ; dataout          ;
+; |fillpills|Equal1~27                       ; |fillpills|Equal1~27                       ; dataout          ;
+; |fillpills|Equal1~28                       ; |fillpills|Equal1~28                       ; dataout          ;
+; |fillpills|Equal1~29                       ; |fillpills|Equal1~29                       ; dataout          ;
+; |fillpills|Equal1~30                       ; |fillpills|Equal1~30                       ; dataout          ;
+; |fillpills|Equal1~31                       ; |fillpills|Equal1~31                       ; dataout          ;
+; |fillpills|Equal0~36                       ; |fillpills|Equal0~36                       ; dataout          ;
+; |fillpills|Equal0~37                       ; |fillpills|Equal0~37                       ; dataout          ;
+; |fillpills|Equal0~38                       ; |fillpills|Equal0~38                       ; dataout          ;
+; |fillpills|Equal0~39                       ; |fillpills|Equal0~39                       ; dataout          ;
+; |fillpills|Equal0~40                       ; |fillpills|Equal0~40                       ; dataout          ;
+; |fillpills|Equal0~41                       ; |fillpills|Equal0~41                       ; dataout          ;
+; |fillpills|Equal0~42                       ; |fillpills|Equal0~42                       ; dataout          ;
+; |fillpills|Equal0~43                       ; |fillpills|Equal0~43                       ; dataout          ;
+; |fillpills|Equal1~32                       ; |fillpills|Equal1~32                       ; dataout          ;
+; |fillpills|Equal1~33                       ; |fillpills|Equal1~33                       ; dataout          ;
+; |fillpills|Equal1~34                       ; |fillpills|Equal1~34                       ; dataout          ;
+; |fillpills|Equal1~35                       ; |fillpills|Equal1~35                       ; dataout          ;
+; |fillpills|Equal1~36                       ; |fillpills|Equal1~36                       ; dataout          ;
+; |fillpills|Equal1~37                       ; |fillpills|Equal1~37                       ; dataout          ;
+; |fillpills|Equal0~44                       ; |fillpills|Equal0~44                       ; dataout          ;
+; |fillpills|Equal0~45                       ; |fillpills|Equal0~45                       ; dataout          ;
+; |fillpills|Equal0~46                       ; |fillpills|Equal0~46                       ; dataout          ;
+; |fillpills|Equal0~47                       ; |fillpills|Equal0~47                       ; dataout          ;
+; |fillpills|Equal0~48                       ; |fillpills|Equal0~48                       ; dataout          ;
+; |fillpills|Equal0~49                       ; |fillpills|Equal0~49                       ; dataout          ;
+; |fillpills|Equal0~50                       ; |fillpills|Equal0~50                       ; dataout          ;
+; |fillpills|Equal0~51                       ; |fillpills|Equal0~51                       ; dataout          ;
+; |fillpills|Equal1~38                       ; |fillpills|Equal1~38                       ; dataout          ;
+; |fillpills|Equal1~39                       ; |fillpills|Equal1~39                       ; dataout          ;
+; |fillpills|Equal1~40                       ; |fillpills|Equal1~40                       ; dataout          ;
+; |fillpills|Equal1~41                       ; |fillpills|Equal1~41                       ; dataout          ;
+; |fillpills|Equal1~42                       ; |fillpills|Equal1~42                       ; dataout          ;
+; |fillpills|Equal1~43                       ; |fillpills|Equal1~43                       ; dataout          ;
++--------------------------------------------+--------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                   ;
++--------------------------------------------+--------------------------------------------+------------------+
+; Node Name                                  ; Output Port Name                           ; Output Port Type ;
++--------------------------------------------+--------------------------------------------+------------------+
+; |fillpills|counter_10:cnt_tpo|cnt_l[0]     ; |fillpills|counter_10:cnt_tpo|cnt_l[0]     ; dataout          ;
+; |fillpills|error~9                         ; |fillpills|error~9                         ; dataout          ;
+; |fillpills|counter_10:cnt_tpo|cnt_l[2]     ; |fillpills|counter_10:cnt_tpo|cnt_l[2]     ; dataout          ;
+; |fillpills|counter_10:cnt_cpt|cnt_l[2]     ; |fillpills|counter_10:cnt_cpt|cnt_l[2]     ; dataout          ;
+; |fillpills|Equal1~16                       ; |fillpills|Equal1~16                       ; dataout          ;
+; |fillpills|counter_10:cnt_bt|cnt_l[2]      ; |fillpills|counter_10:cnt_bt|cnt_l[2]      ; dataout          ;
+; |fillpills|Equal2~4                        ; |fillpills|Equal2~4                        ; dataout          ;
+; |fillpills|Equal2~8                        ; |fillpills|Equal2~8                        ; dataout          ;
+; |fillpills|Equal2~12                       ; |fillpills|Equal2~12                       ; dataout          ;
+; |fillpills|Equal2~16                       ; |fillpills|Equal2~16                       ; dataout          ;
+; |fillpills|Equal3~4                        ; |fillpills|Equal3~4                        ; dataout          ;
+; |fillpills|Equal3~8                        ; |fillpills|Equal3~8                        ; dataout          ;
+; |fillpills|Equal3~12                       ; |fillpills|Equal3~12                       ; dataout          ;
+; |fillpills|Equal3~16                       ; |fillpills|Equal3~16                       ; dataout          ;
+; |fillpills|lg4~27                          ; |fillpills|lg4~27                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpt|cnt_l[3]     ; |fillpills|counter_10:cnt_cpt|cnt_l[3]     ; dataout          ;
+; |fillpills|counter_10:cnt_bt|cnt_l[3]      ; |fillpills|counter_10:cnt_bt|cnt_l[3]      ; dataout          ;
+; |fillpills|counter_10:cnt_tpo|cnt_l[1]     ; |fillpills|counter_10:cnt_tpo|cnt_l[1]     ; dataout          ;
+; |fillpills|counter_10:cnt_tpt|cnt_l[0]     ; |fillpills|counter_10:cnt_tpt|cnt_l[0]     ; dataout          ;
+; |fillpills|lg4~31                          ; |fillpills|lg4~31                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpt|cnt_l[1]     ; |fillpills|counter_10:cnt_cpt|cnt_l[1]     ; dataout          ;
+; |fillpills|counter_10:cnt_bt|cnt_l[1]      ; |fillpills|counter_10:cnt_bt|cnt_l[1]      ; dataout          ;
+; |fillpills|counter_10:cnt_tpt|cnt_l[2]     ; |fillpills|counter_10:cnt_tpt|cnt_l[2]     ; dataout          ;
+; |fillpills|lg4~35                          ; |fillpills|lg4~35                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpo|co           ; |fillpills|counter_10:cnt_cpo|co           ; dataout          ;
+; |fillpills|counter_10:cnt_cpt|cnt_l[0]     ; |fillpills|counter_10:cnt_cpt|cnt_l[0]     ; dataout          ;
+; |fillpills|counter_10:cnt_cpo|cnt_l[2]     ; |fillpills|counter_10:cnt_cpo|cnt_l[2]     ; dataout          ;
+; |fillpills|counter_10:cnt_tpt|cnt_l[1]     ; |fillpills|counter_10:cnt_tpt|cnt_l[1]     ; dataout          ;
+; |fillpills|counter_10:cnt_tph|cnt_l[0]     ; |fillpills|counter_10:cnt_tph|cnt_l[0]     ; dataout          ;
+; |fillpills|lg5~27                          ; |fillpills|lg5~27                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpo|cnt_l[3]     ; |fillpills|counter_10:cnt_cpo|cnt_l[3]     ; dataout          ;
+; |fillpills|lg6~27                          ; |fillpills|lg6~27                          ; dataout          ;
+; |fillpills|counter_10:cnt_tph|cnt_l[2]     ; |fillpills|counter_10:cnt_tph|cnt_l[2]     ; dataout          ;
+; |fillpills|lg5~31                          ; |fillpills|lg5~31                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpo|cnt_l[1]     ; |fillpills|counter_10:cnt_cpo|cnt_l[1]     ; dataout          ;
+; |fillpills|lg6~31                          ; |fillpills|lg6~31                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpo|cnt_l[0]     ; |fillpills|counter_10:cnt_cpo|cnt_l[0]     ; dataout          ;
+; |fillpills|lg5~35                          ; |fillpills|lg5~35                          ; dataout          ;
+; |fillpills|counter_10:cnt_bo|co            ; |fillpills|counter_10:cnt_bo|co            ; dataout          ;
+; |fillpills|counter_10:cnt_bt|cnt_l[0]      ; |fillpills|counter_10:cnt_bt|cnt_l[0]      ; dataout          ;
+; |fillpills|lg5~39                          ; |fillpills|lg5~39                          ; dataout          ;
+; |fillpills|lg6~35                          ; |fillpills|lg6~35                          ; dataout          ;
+; |fillpills|counter_10:cnt_tph|cnt_l[1]     ; |fillpills|counter_10:cnt_tph|cnt_l[1]     ; dataout          ;
+; |fillpills|counter_10:cnt_bo|cnt_l[2]      ; |fillpills|counter_10:cnt_bo|cnt_l[2]      ; dataout          ;
+; |fillpills|lg4~39                          ; |fillpills|lg4~39                          ; dataout          ;
+; |fillpills|lg6~39                          ; |fillpills|lg6~39                          ; dataout          ;
+; |fillpills|counter_10:cnt_bo|cnt_l[3]      ; |fillpills|counter_10:cnt_bo|cnt_l[3]      ; dataout          ;
+; |fillpills|counter_10:cnt_bo|cnt_l[1]      ; |fillpills|counter_10:cnt_bo|cnt_l[1]      ; dataout          ;
+; |fillpills|counter_10:cnt_bo|cnt_l[0]      ; |fillpills|counter_10:cnt_bo|cnt_l[0]      ; dataout          ;
+; |fillpills|counter_10:cnt_tpo|cnt_l[3]~37  ; |fillpills|counter_10:cnt_tpo|cnt_l[3]~37  ; pexpout          ;
+; |fillpills|counter_10:cnt_cpt|cnt_l[3]~37  ; |fillpills|counter_10:cnt_cpt|cnt_l[3]~37  ; pexpout          ;
+; |fillpills|counter_10:cnt_bt|cnt_l[3]~37   ; |fillpills|counter_10:cnt_bt|cnt_l[3]~37   ; pexpout          ;
+; |fillpills|counter_10:cnt_cpo|co~11        ; |fillpills|counter_10:cnt_cpo|co~11        ; pexpout          ;
+; |fillpills|counter_10:cnt_tpt|cnt_l[3]~37  ; |fillpills|counter_10:cnt_tpt|cnt_l[3]~37  ; pexpout          ;
+; |fillpills|counter_10:cnt_cpo|cnt_l[3]~37  ; |fillpills|counter_10:cnt_cpo|cnt_l[3]~37  ; pexpout          ;
+; |fillpills|counter_10:cnt_tph|cnt_l[3]~37  ; |fillpills|counter_10:cnt_tph|cnt_l[3]~37  ; pexpout          ;
+; |fillpills|counter_10:cnt_bo|co~11         ; |fillpills|counter_10:cnt_bo|co~11         ; pexpout          ;
+; |fillpills|counter_10:cnt_bo|cnt_l[3]~37   ; |fillpills|counter_10:cnt_bo|cnt_l[3]~37   ; pexpout          ;
+; |fillpills|~VCC~0                          ; |fillpills|~VCC~0                          ; dataout          ;
+; |fillpills|~VCC~1                          ; |fillpills|~VCC~1                          ; dataout          ;
+; |fillpills|~VCC~2                          ; |fillpills|~VCC~2                          ; dataout          ;
+; |fillpills|~VCC~3                          ; |fillpills|~VCC~3                          ; dataout          ;
+; |fillpills|counter_10:cnt_cpo|Equal0~2sexp ; |fillpills|counter_10:cnt_cpo|Equal0~2sexp ; dataout          ;
+; |fillpills|counter_10:cnt_bo|Equal0~2sexp  ; |fillpills|counter_10:cnt_bo|Equal0~2sexp  ; dataout          ;
+; |fillpills|Equal0~4sexp1                   ; |fillpills|Equal0~4sexp1                   ; dataout          ;
+; |fillpills|Equal0~4sexp2                   ; |fillpills|Equal0~4sexp2                   ; dataout          ;
+; |fillpills|Equal0~8sexp1                   ; |fillpills|Equal0~8sexp1                   ; dataout          ;
+; |fillpills|Equal0~8sexp2                   ; |fillpills|Equal0~8sexp2                   ; dataout          ;
+; |fillpills|Equal0~12sexp1                  ; |fillpills|Equal0~12sexp1                  ; dataout          ;
+; |fillpills|Equal0~12sexp2                  ; |fillpills|Equal0~12sexp2                  ; dataout          ;
+; |fillpills|Equal0~16sexp1                  ; |fillpills|Equal0~16sexp1                  ; dataout          ;
+; |fillpills|Equal0~16sexp2                  ; |fillpills|Equal0~16sexp2                  ; dataout          ;
+; |fillpills|Equal1~4sexp1                   ; |fillpills|Equal1~4sexp1                   ; dataout          ;
+; |fillpills|Equal1~4sexp2                   ; |fillpills|Equal1~4sexp2                   ; dataout          ;
+; |fillpills|Equal1~8sexp1                   ; |fillpills|Equal1~8sexp1                   ; dataout          ;
+; |fillpills|Equal1~8sexp2                   ; |fillpills|Equal1~8sexp2                   ; dataout          ;
+; |fillpills|Equal1~12sexp1                  ; |fillpills|Equal1~12sexp1                  ; dataout          ;
+; |fillpills|Equal1~12sexp2                  ; |fillpills|Equal1~12sexp2                  ; dataout          ;
+; |fillpills|input[0]                        ; |fillpills|input[0]~corein                 ; dataout          ;
+; |fillpills|input[1]                        ; |fillpills|input[1]~corein                 ; dataout          ;
+; |fillpills|input[2]                        ; |fillpills|input[2]~corein                 ; dataout          ;
+; |fillpills|input[3]                        ; |fillpills|input[3]~corein                 ; dataout          ;
+; |fillpills|input_control[0]                ; |fillpills|input_control[0]~corein         ; dataout          ;
+; |fillpills|input_control[1]                ; |fillpills|input_control[1]~corein         ; dataout          ;
+; |fillpills|mode                            ; |fillpills|mode~corein                     ; dataout          ;
+; |fillpills|working                         ; |fillpills|working~corein                  ; dataout          ;
+; |fillpills|display_mode                    ; |fillpills|display_mode~corein             ; dataout          ;
+; |fillpills|clr                             ; |fillpills|clr~corein                      ; dataout          ;
+; |fillpills|qd                              ; |fillpills|qd~corein                       ; dataout          ;
+; |fillpills|lg2[0]                          ; |fillpills|lg2[0]                          ; padio            ;
+; |fillpills|lg2[1]                          ; |fillpills|lg2[1]                          ; padio            ;
+; |fillpills|lg2[2]                          ; |fillpills|lg2[2]                          ; padio            ;
+; |fillpills|lg2[3]                          ; |fillpills|lg2[3]                          ; padio            ;
+; |fillpills|red_light                       ; |fillpills|red_light                       ; padio            ;
+; |fillpills|green_light                     ; |fillpills|green_light                     ; padio            ;
+; |fillpills|lg4[2]                          ; |fillpills|lg4[2]                          ; padio            ;
+; |fillpills|lg4[3]                          ; |fillpills|lg4[3]                          ; padio            ;
+; |fillpills|lg4[1]                          ; |fillpills|lg4[1]                          ; padio            ;
+; |fillpills|lg5[2]                          ; |fillpills|lg5[2]                          ; padio            ;
+; |fillpills|lg6[0]                          ; |fillpills|lg6[0]                          ; padio            ;
+; |fillpills|lg5[3]                          ; |fillpills|lg5[3]                          ; padio            ;
+; |fillpills|lg6[2]                          ; |fillpills|lg6[2]                          ; padio            ;
+; |fillpills|lg5[1]                          ; |fillpills|lg5[1]                          ; padio            ;
+; |fillpills|lg5[0]                          ; |fillpills|lg5[0]                          ; padio            ;
+; |fillpills|lg6[3]                          ; |fillpills|lg6[3]                          ; padio            ;
+; |fillpills|lg4[0]                          ; |fillpills|lg4[0]                          ; padio            ;
+; |fillpills|lg6[1]                          ; |fillpills|lg6[1]                          ; padio            ;
+; |fillpills|lg3[2]                          ; |fillpills|lg3[2]                          ; padio            ;
+; |fillpills|lg3[3]                          ; |fillpills|lg3[3]                          ; padio            ;
+; |fillpills|lg3[1]                          ; |fillpills|lg3[1]                          ; padio            ;
+; |fillpills|lg3[0]                          ; |fillpills|lg3[0]                          ; padio            ;
+; |fillpills|Equal0~20                       ; |fillpills|Equal0~20                       ; dataout          ;
+; |fillpills|Equal0~21                       ; |fillpills|Equal0~21                       ; dataout          ;
+; |fillpills|Equal0~22                       ; |fillpills|Equal0~22                       ; dataout          ;
+; |fillpills|Equal0~23                       ; |fillpills|Equal0~23                       ; dataout          ;
+; |fillpills|Equal0~24                       ; |fillpills|Equal0~24                       ; dataout          ;
+; |fillpills|Equal0~25                       ; |fillpills|Equal0~25                       ; dataout          ;
+; |fillpills|Equal0~26                       ; |fillpills|Equal0~26                       ; dataout          ;
+; |fillpills|Equal0~27                       ; |fillpills|Equal0~27                       ; dataout          ;
+; |fillpills|Equal1~20                       ; |fillpills|Equal1~20                       ; dataout          ;
+; |fillpills|Equal1~21                       ; |fillpills|Equal1~21                       ; dataout          ;
+; |fillpills|Equal1~22                       ; |fillpills|Equal1~22                       ; dataout          ;
+; |fillpills|Equal1~23                       ; |fillpills|Equal1~23                       ; dataout          ;
+; |fillpills|Equal1~24                       ; |fillpills|Equal1~24                       ; dataout          ;
+; |fillpills|Equal1~25                       ; |fillpills|Equal1~25                       ; dataout          ;
+; |fillpills|Equal0~28                       ; |fillpills|Equal0~28                       ; dataout          ;
+; |fillpills|Equal0~29                       ; |fillpills|Equal0~29                       ; dataout          ;
+; |fillpills|Equal0~30                       ; |fillpills|Equal0~30                       ; dataout          ;
+; |fillpills|Equal0~31                       ; |fillpills|Equal0~31                       ; dataout          ;
+; |fillpills|Equal0~32                       ; |fillpills|Equal0~32                       ; dataout          ;
+; |fillpills|Equal0~33                       ; |fillpills|Equal0~33                       ; dataout          ;
+; |fillpills|Equal0~34                       ; |fillpills|Equal0~34                       ; dataout          ;
+; |fillpills|Equal0~35                       ; |fillpills|Equal0~35                       ; dataout          ;
+; |fillpills|Equal1~26                       ; |fillpills|Equal1~26                       ; dataout          ;
+; |fillpills|Equal1~27                       ; |fillpills|Equal1~27                       ; dataout          ;
+; |fillpills|Equal1~28                       ; |fillpills|Equal1~28                       ; dataout          ;
+; |fillpills|Equal1~29                       ; |fillpills|Equal1~29                       ; dataout          ;
+; |fillpills|Equal1~30                       ; |fillpills|Equal1~30                       ; dataout          ;
+; |fillpills|Equal1~31                       ; |fillpills|Equal1~31                       ; dataout          ;
+; |fillpills|Equal0~36                       ; |fillpills|Equal0~36                       ; dataout          ;
+; |fillpills|Equal0~37                       ; |fillpills|Equal0~37                       ; dataout          ;
+; |fillpills|Equal0~38                       ; |fillpills|Equal0~38                       ; dataout          ;
+; |fillpills|Equal0~39                       ; |fillpills|Equal0~39                       ; dataout          ;
+; |fillpills|Equal0~40                       ; |fillpills|Equal0~40                       ; dataout          ;
+; |fillpills|Equal0~41                       ; |fillpills|Equal0~41                       ; dataout          ;
+; |fillpills|Equal0~42                       ; |fillpills|Equal0~42                       ; dataout          ;
+; |fillpills|Equal0~43                       ; |fillpills|Equal0~43                       ; dataout          ;
+; |fillpills|Equal1~32                       ; |fillpills|Equal1~32                       ; dataout          ;
+; |fillpills|Equal1~33                       ; |fillpills|Equal1~33                       ; dataout          ;
+; |fillpills|Equal1~34                       ; |fillpills|Equal1~34                       ; dataout          ;
+; |fillpills|Equal1~35                       ; |fillpills|Equal1~35                       ; dataout          ;
+; |fillpills|Equal1~36                       ; |fillpills|Equal1~36                       ; dataout          ;
+; |fillpills|Equal1~37                       ; |fillpills|Equal1~37                       ; dataout          ;
+; |fillpills|Equal0~44                       ; |fillpills|Equal0~44                       ; dataout          ;
+; |fillpills|Equal0~45                       ; |fillpills|Equal0~45                       ; dataout          ;
+; |fillpills|Equal0~46                       ; |fillpills|Equal0~46                       ; dataout          ;
+; |fillpills|Equal0~47                       ; |fillpills|Equal0~47                       ; dataout          ;
+; |fillpills|Equal0~48                       ; |fillpills|Equal0~48                       ; dataout          ;
+; |fillpills|Equal0~49                       ; |fillpills|Equal0~49                       ; dataout          ;
+; |fillpills|Equal0~50                       ; |fillpills|Equal0~50                       ; dataout          ;
+; |fillpills|Equal0~51                       ; |fillpills|Equal0~51                       ; dataout          ;
+; |fillpills|Equal1~38                       ; |fillpills|Equal1~38                       ; dataout          ;
+; |fillpills|Equal1~39                       ; |fillpills|Equal1~39                       ; dataout          ;
+; |fillpills|Equal1~40                       ; |fillpills|Equal1~40                       ; dataout          ;
+; |fillpills|Equal1~41                       ; |fillpills|Equal1~41                       ; dataout          ;
+; |fillpills|Equal1~42                       ; |fillpills|Equal1~42                       ; dataout          ;
+; |fillpills|Equal1~43                       ; |fillpills|Equal1~43                       ; dataout          ;
++--------------------------------------------+--------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri May 19 11:30:48 2023
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off fillpills -c fillpills
+Info: Using vector source file "C:/Users/lenovo/Desktop/Ò©Æ·×°ÅäbyMike/fillpills.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found clock high time violation at 29.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 29.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 39.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 39.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 49.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 49.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 59.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 59.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 69.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 69.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 79.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 79.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 89.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 89.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 99.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 99.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 109.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 109.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 119.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 119.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 129.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 129.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 139.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 139.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 149.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 149.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 159.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 159.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 169.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 169.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 179.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 179.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 189.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 189.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 199.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 199.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 209.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 209.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 219.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 219.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 229.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 229.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 239.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 239.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 249.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 249.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 259.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 259.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 269.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 269.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 279.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 279.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 289.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 289.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 299.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 299.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 309.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 309.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 319.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 319.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 329.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 329.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 339.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 339.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 349.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 349.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 359.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 359.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 369.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 369.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 379.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 379.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 389.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 389.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 399.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 399.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 409.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 409.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 419.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 419.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 429.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 429.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 439.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 439.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 449.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 449.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 459.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 459.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 469.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 469.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 479.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 479.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 489.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 489.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 499.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 499.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 509.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 509.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 519.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 519.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 529.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 529.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 539.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 539.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 549.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 549.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 559.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 559.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 569.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 569.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 579.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 579.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 589.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 589.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 599.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 599.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 609.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 609.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 619.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 619.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 629.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 629.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 639.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 639.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 649.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 649.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 659.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 659.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 669.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 669.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 679.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 679.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 689.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 689.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 699.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 699.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 709.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 709.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 719.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 719.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 729.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 729.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 739.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 739.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 749.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 749.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 759.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 759.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 769.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 769.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 779.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 779.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 789.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 789.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 799.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 799.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 809.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 809.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 819.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 819.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 829.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 829.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 839.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 839.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 849.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 849.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 859.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 859.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 869.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 869.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 879.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 879.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 889.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 889.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 899.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 899.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 909.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 909.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 919.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 919.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 929.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 929.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 939.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 939.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 949.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 949.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 959.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 959.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 969.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 969.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 979.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 979.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 989.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 989.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Warning: Found clock high time violation at 999.0 ns on register "|fillpills|counter_10:cnt_tpo|co"
+Warning: Found clock high time violation at 999.0 ns on register "|fillpills|counter_10:cnt_cpo|co"
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       0.60 %
+Info: Number of transitions in simulation is 397
+Info: Quartus II Simulator was successful. 0 errors, 196 warnings
+    Info: Peak virtual memory: 151 megabytes
+    Info: Processing ended: Fri May 19 11:30:49 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

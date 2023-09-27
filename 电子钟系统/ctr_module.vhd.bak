@@ -1,0 +1,196 @@
+LIBRARY IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY ctr_module IS
+	port(
+		clk_in:in STD_LOGIC;
+		clk_in_100:in STD_LOGIC;
+		set:in STD_LOGIC;
+		
+		switch:in STD_LOGIC_VECTOR(1 downto 0);
+		state:in STD_LOGIC;
+		
+		clk_out:out STD_LOGIC;
+		clk_out1:out STD_LOGIC;
+		
+		
+		add_min:out STD_LOGIC;
+		add_hour:out STD_LOGIC;
+		rst_sec:out STD_LOGIC;
+		intcout:out INTEGER RANGE 1 TO 6;
+		time_en:out STD_LOGIC;
+		clock_en:out std_logic
+		);
+END ctr_module;
+
+ARCHITECTURE arch OF ctr_module IS
+	signal	min: STD_LOGIC;
+	signal	hour: STD_LOGIC;
+	signal	sec: STD_LOGIC;
+	signal	en: STD_LOGIC;
+	signal  sig_clock_en:std_logic;
+	signal  clk_3hz:std_logic;
+	signal  stop:std_logic;
+	SIGNAL  temp: INTEGER RANGE 0 TO 200;
+	SIGNAL  temp_3hz: INTEGER RANGE 0 TO 200;
+	
+	signal int : INTEGER RANGE 1 TO 6;
+	SIGNAL temp1: INTEGER RANGE 0 TO 1000;
+	signal ping : INTEGER RANGE 0 TO 100;
+	signal ping_2 : INTEGER RANGE 0 TO 100;
+begin
+
+	intcout<=int;
+	-------------------------------------
+	process(set,state,switch)
+		begin
+		if(state='1') then
+			en<='1';
+				CASE(switch) IS
+				WHEN "00"=>
+					sec<=NOT set;
+					min<='0';
+					hour<='0';
+					sig_clock_en<='0';						
+				WHEN "01" =>
+					sec<='1';
+					min<=set;
+					hour<='0';
+					sig_clock_en<='0';
+				WHEN "10" =>
+					sec<='1';
+					min<='0';
+					hour<=set;
+					sig_clock_en<='0';
+				WHEN OTHERS =>
+					sec<='1';
+					min<='0';
+					hour<='0';
+					sig_clock_en<='1';
+				END CASE;
+		else 	
+			en<='0';
+			sig_clock_en<='0';
+			sec<='1';
+			min<='0';
+			hour<='0';
+		end if;
+	end process;	
+	-----------------------------------
+	-- 时钟分频
+
+	process(clk_in_100)              
+      BEGIN
+        IF(clk_in_100'event and clk_in_100='1')THEN
+           IF temp= 99 THEN
+				temp <= 0; 	
+           else 
+              temp <= temp+1;
+           END If;         
+           
+        END IF;
+	END PROCESS;
+	
+	process(clk_in_100,temp)
+     BEGIN
+        IF(clk_in_100'event and clk_in_100='1')THEN
+           if( temp<50) then  
+               clk_out <= '0' ; 
+           else                       
+               clk_out <= '1'; 
+           end if;
+        END IF;		   
+	END process;
+	
+	------------------------------------------
+	-- 控制一个音响多久 停多久
+	process(clk_in_100)              
+      BEGIN
+        IF(clk_in_100'event and clk_in_100='1')THEN
+           IF temp_3hz = 50 THEN      
+				stop<='1';
+				 temp_3hz<= temp_3hz+1;
+				if(int=6)then
+					int<=1;
+				else 
+					int<=int+1;
+				end if;
+			elsif temp_3hz =70 then
+				stop<='0';	
+				temp_3hz<= 0;
+           else 
+              temp_3hz<= temp_3hz+1;
+           END If;          
+        END IF;
+	END PROCESS;
+	------------------------------------------
+	
+	--  改变模式
+	process(int)
+	begin
+		case(int)is
+			when 1=> 	ping<= 38 ;--1
+			when 2=>	ping<= 30 ;--5
+			when 3=> 	ping<= 34 ;--5
+			when 4=> 	ping<= 25 ;--6
+			when 5=>	ping<= 29 ;--6
+			when 6=> 	ping<= 25 ;--5
+			
+--			when 1=> 	ping<= 30 ;--1
+--			when 2=>	ping<= 20 ;--5
+--			when 3=> 	ping<= 40 ;--5
+--			when 4=> 	ping<= 20 ;--6
+--			when 5=>	ping<= 30 ;--6
+--			when 6=> 	ping<= 40 ;--5
+		end case;
+	end process;
+
+	ping_2<= ping/2;
+
+		--do 1 260hz 38  
+		--re 2 34
+		--mi 3 30
+		--fa 4 29
+		--so 5 25
+		--la 6 22
+		--si 7 20
+
+	------------------------------------
+	-- 音乐分频
+	process(clk_in)              
+      BEGIN
+        IF(clk_in'event and clk_in='1')THEN
+           IF temp1 >= ping THEN
+				temp1 <= 0; 
+           else 
+              temp1 <= temp1+1;
+           END IF;
+        END IF;
+	END PROCESS;
+	
+	process(clk_in,ping)
+     BEGIN
+        IF(clk_in'event and clk_in='1')THEN
+			if(stop='1')THEN
+				clk_out1 <=  'Z';
+           elsif( temp1<ping_2) then  
+               clk_out1 <= '0' ; 
+           else                       
+               clk_out1 <= '1'; 
+           end if;
+        END IF;
+	END process;
+	---------------------------------
+		
+	clock_en<=sig_clock_en;
+	rst_sec<=sec;
+	add_min<=min;
+	add_hour<=hour;	
+	time_en <= en;
+	
+END arch;
+
+
+
+  

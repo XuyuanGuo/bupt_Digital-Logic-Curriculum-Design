@@ -1,0 +1,634 @@
+Fitter report for fillpills
+Tue Jun 06 22:01:01 2023
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. All Package Pins
+ 10. Output Pin Default Load For Reported TCO
+ 11. Fitter Resource Utilization by Entity
+ 12. Control Signals
+ 13. Non-Global High Fan-Out Signals
+ 14. Interconnect Usage Summary
+ 15. LAB External Interconnect
+ 16. LAB Macrocells
+ 17. Parallel Expander
+ 18. Shareable Expander
+ 19. Logic Cell Interconnection
+ 20. Fitter Device Options
+ 21. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------+
+; Fitter Summary                                                       ;
++-----------------------+----------------------------------------------+
+; Fitter Status         ; Successful - Tue Jun 06 22:01:01 2023        ;
+; Quartus II Version    ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name         ; fillpills                                    ;
+; Top-level Entity Name ; fillpills                                    ;
+; Family                ; MAX7000S                                     ;
+; Device                ; EPM7128SLC84-15                              ;
+; Timing Models         ; Final                                        ;
+; Total macrocells      ; 105 / 128 ( 82 % )                           ;
+; Total pins            ; 40 / 68 ( 59 % )                             ;
++-----------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Fitter Settings                                                                      ;
++----------------------------------------------------+-----------------+---------------+
+; Option                                             ; Setting         ; Default Value ;
++----------------------------------------------------+-----------------+---------------+
+; Device                                             ; EPM7128SLC84-15 ;               ;
+; Use smart compilation                              ; Off             ; Off           ;
+; Use TimeQuest Timing Analyzer                      ; Off             ; Off           ;
+; Optimize Timing for ECOs                           ; Off             ; Off           ;
+; Regenerate full fit report during ECO compiles     ; Off             ; Off           ;
+; Optimize IOC Register Placement for Timing         ; On              ; On            ;
+; Limit to One Fitting Attempt                       ; Off             ; Off           ;
+; Fitter Initial Placement Seed                      ; 1               ; 1             ;
+; Slow Slew Rate                                     ; Off             ; Off           ;
+; Fitter Effort                                      ; Auto Fit        ; Auto Fit      ;
+; Force Fitter to Avoid Periphery Placement Warnings ; Off             ; Off           ;
++----------------------------------------------------+-----------------+---------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in F:/Ò©Æ·×°Åä×îÖÕ°æ/fillpills.pin.
+
+
++--------------------------------------------------------+
+; Fitter Resource Usage Summary                          ;
++-----------------------------------+--------------------+
+; Resource                          ; Usage              ;
++-----------------------------------+--------------------+
+; Logic cells                       ; 105 / 128 ( 82 % ) ;
+; Registers                         ; 61 / 128 ( 48 % )  ;
+; Number of pterms used             ; 397                ;
+; User inserted logic elements      ; 0                  ;
+; I/O pins                          ; 40 / 68 ( 59 % )   ;
+;     -- Clock pins                 ; 0 / 2 ( 0 % )      ;
+;     -- Dedicated input pins       ; 0 / 2 ( 0 % )      ;
+; Global signals                    ; 0                  ;
+; Shareable expanders               ; 55 / 128 ( 43 % )  ;
+; Parallel expanders                ; 9 / 120 ( 8 % )    ;
+; Cells using turbo bit             ; 105 / 128 ( 82 % ) ;
+; Maximum fan-out node              ; mode               ;
+; Maximum fan-out                   ; 84                 ;
+; Highest non-global fan-out signal ; mode               ;
+; Highest non-global fan-out        ; 84                 ;
+; Total fan-out                     ; 907                ;
+; Average fan-out                   ; 4.54               ;
++-----------------------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                             ;
++------------------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; Name             ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
++------------------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; clk              ; 58    ; --       ; 6   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; clk_buzzer       ; 57    ; --       ; 6   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; clr              ; 63    ; --       ; 7   ; 40                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; display_mode     ; 64    ; --       ; 7   ; 16                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; input[0]         ; 54    ; --       ; 6   ; 4                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; input[1]         ; 81    ; --       ; 8   ; 17                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; input[2]         ; 80    ; --       ; 8   ; 17                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; input[3]         ; 79    ; --       ; 8   ; 17                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; input_control[0] ; 77    ; --       ; 8   ; 20                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; input_control[1] ; 76    ; --       ; 8   ; 20                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; mode             ; 75    ; --       ; 8   ; 84                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; qd               ; 60    ; --       ; 6   ; 17                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; working          ; 73    ; --       ; 8   ; 38                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
++------------------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                        ;
++-------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+
+; Name        ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ;
++-------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+
+; buzzer      ; 52    ; --       ; 5   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
+; green_light ; 50    ; --       ; 5   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
+; lg2[0]      ; 37    ; --       ; 4   ; no              ; no             ; yes        ; no            ; TTL          ; User                 ; 10 pF ;
+; lg2[1]      ; 39    ; --       ; 4   ; no              ; no             ; yes        ; no            ; TTL          ; User                 ; 10 pF ;
+; lg2[2]      ; 40    ; --       ; 4   ; no              ; no             ; yes        ; no            ; TTL          ; User                 ; 10 pF ;
+; lg2[3]      ; 41    ; --       ; 4   ; no              ; no             ; yes        ; no            ; TTL          ; User                 ; 10 pF ;
+; lg3[0]      ; 35    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg3[1]      ; 36    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg3[2]      ; 17    ; --       ; 2   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg3[3]      ; 18    ; --       ; 2   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg4[0]      ; 30    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg4[1]      ; 31    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg4[2]      ; 33    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg4[3]      ; 34    ; --       ; 4   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg5[0]      ; 25    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg5[1]      ; 27    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg5[2]      ; 28    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg5[3]      ; 29    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg6[0]      ; 20    ; --       ; 2   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg6[1]      ; 21    ; --       ; 2   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg6[2]      ; 22    ; --       ; 2   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; lg6[3]      ; 24    ; --       ; 3   ; no              ; no             ; no         ; yes           ; TTL          ; User                 ; 10 pF ;
+; red_light   ; 49    ; --       ; 5   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
++-------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                        ;
++----------+------------+----------+------------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage   ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+------------------+--------+--------------+---------+-----------------+
+; 1        ; 0          ; --       ; GND+             ;        ;              ;         ;                 ;
+; 2        ; 1          ; --       ; GND+             ;        ;              ;         ;                 ;
+; 3        ; 2          ; --       ; VCCINT           ; power  ;              ; 5.0V    ;                 ;
+; 4        ; 3          ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 5        ; 4          ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 6        ; 5          ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 7        ; 6          ; --       ; GND              ; gnd    ;              ;         ;                 ;
+; 8        ; 7          ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 9        ; 8          ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 10       ; 9          ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 11       ; 10         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 12       ; 11         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 13       ; 12         ; --       ; VCCIO            ; power  ;              ; 5.0V    ;                 ;
+; 14       ; 13         ; --       ; TDI              ; input  ; TTL          ;         ; N               ;
+; 15       ; 14         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 16       ; 15         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 17       ; 16         ; --       ; lg3[2]           ; output ; TTL          ;         ; Y               ;
+; 18       ; 17         ; --       ; lg3[3]           ; output ; TTL          ;         ; Y               ;
+; 19       ; 18         ; --       ; GND              ; gnd    ;              ;         ;                 ;
+; 20       ; 19         ; --       ; lg6[0]           ; output ; TTL          ;         ; Y               ;
+; 21       ; 20         ; --       ; lg6[1]           ; output ; TTL          ;         ; Y               ;
+; 22       ; 21         ; --       ; lg6[2]           ; output ; TTL          ;         ; Y               ;
+; 23       ; 22         ; --       ; TMS              ; input  ; TTL          ;         ; N               ;
+; 24       ; 23         ; --       ; lg6[3]           ; output ; TTL          ;         ; Y               ;
+; 25       ; 24         ; --       ; lg5[0]           ; output ; TTL          ;         ; Y               ;
+; 26       ; 25         ; --       ; VCCIO            ; power  ;              ; 5.0V    ;                 ;
+; 27       ; 26         ; --       ; lg5[1]           ; output ; TTL          ;         ; Y               ;
+; 28       ; 27         ; --       ; lg5[2]           ; output ; TTL          ;         ; Y               ;
+; 29       ; 28         ; --       ; lg5[3]           ; output ; TTL          ;         ; Y               ;
+; 30       ; 29         ; --       ; lg4[0]           ; output ; TTL          ;         ; Y               ;
+; 31       ; 30         ; --       ; lg4[1]           ; output ; TTL          ;         ; Y               ;
+; 32       ; 31         ; --       ; GND              ; gnd    ;              ;         ;                 ;
+; 33       ; 32         ; --       ; lg4[2]           ; output ; TTL          ;         ; Y               ;
+; 34       ; 33         ; --       ; lg4[3]           ; output ; TTL          ;         ; Y               ;
+; 35       ; 34         ; --       ; lg3[0]           ; output ; TTL          ;         ; Y               ;
+; 36       ; 35         ; --       ; lg3[1]           ; output ; TTL          ;         ; Y               ;
+; 37       ; 36         ; --       ; lg2[0]           ; output ; TTL          ;         ; Y               ;
+; 38       ; 37         ; --       ; VCCIO            ; power  ;              ; 5.0V    ;                 ;
+; 39       ; 38         ; --       ; lg2[1]           ; output ; TTL          ;         ; Y               ;
+; 40       ; 39         ; --       ; lg2[2]           ; output ; TTL          ;         ; Y               ;
+; 41       ; 40         ; --       ; lg2[3]           ; output ; TTL          ;         ; Y               ;
+; 42       ; 41         ; --       ; GND              ; gnd    ;              ;         ;                 ;
+; 43       ; 42         ; --       ; VCCINT           ; power  ;              ; 5.0V    ;                 ;
+; 44       ; 43         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 45       ; 44         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 46       ; 45         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 47       ; 46         ; --       ; GND              ; gnd    ;              ;         ;                 ;
+; 48       ; 47         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 49       ; 48         ; --       ; red_light        ; output ; TTL          ;         ; Y               ;
+; 50       ; 49         ; --       ; green_light      ; output ; TTL          ;         ; Y               ;
+; 51       ; 50         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 52       ; 51         ; --       ; buzzer           ; output ; TTL          ;         ; Y               ;
+; 53       ; 52         ; --       ; VCCIO            ; power  ;              ; 5.0V    ;                 ;
+; 54       ; 53         ; --       ; input[0]         ; input  ; TTL          ;         ; Y               ;
+; 55       ; 54         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 56       ; 55         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 57       ; 56         ; --       ; clk_buzzer       ; input  ; TTL          ;         ; Y               ;
+; 58       ; 57         ; --       ; clk              ; input  ; TTL          ;         ; Y               ;
+; 59       ; 58         ; --       ; GND              ; gnd    ;              ;         ;                 ;
+; 60       ; 59         ; --       ; qd               ; input  ; TTL          ;         ; Y               ;
+; 61       ; 60         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 62       ; 61         ; --       ; TCK              ; input  ; TTL          ;         ; N               ;
+; 63       ; 62         ; --       ; clr              ; input  ; TTL          ;         ; Y               ;
+; 64       ; 63         ; --       ; display_mode     ; input  ; TTL          ;         ; Y               ;
+; 65       ; 64         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 66       ; 65         ; --       ; VCCIO            ; power  ;              ; 5.0V    ;                 ;
+; 67       ; 66         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 68       ; 67         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 69       ; 68         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 70       ; 69         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 71       ; 70         ; --       ; TDO              ; output ; TTL          ;         ; N               ;
+; 72       ; 71         ; --       ; GND              ; gnd    ;              ;         ;                 ;
+; 73       ; 72         ; --       ; working          ; input  ; TTL          ;         ; Y               ;
+; 74       ; 73         ; --       ; RESERVED         ;        ;              ;         ;                 ;
+; 75       ; 74         ; --       ; mode             ; input  ; TTL          ;         ; Y               ;
+; 76       ; 75         ; --       ; input_control[1] ; input  ; TTL          ;         ; Y               ;
+; 77       ; 76         ; --       ; input_control[0] ; input  ; TTL          ;         ; Y               ;
+; 78       ; 77         ; --       ; VCCIO            ; power  ;              ; 5.0V    ;                 ;
+; 79       ; 78         ; --       ; input[3]         ; input  ; TTL          ;         ; Y               ;
+; 80       ; 79         ; --       ; input[2]         ; input  ; TTL          ;         ; Y               ;
+; 81       ; 80         ; --       ; input[1]         ; input  ; TTL          ;         ; Y               ;
+; 82       ; 81         ; --       ; GND              ; gnd    ;              ;         ;                 ;
+; 83       ; 82         ; --       ; GND+             ;        ;              ;         ;                 ;
+; 84       ; 83         ; --       ; GND+             ;        ;              ;         ;                 ;
++----------+------------+----------+------------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; 3.3-V LVTTL  ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS ; 10 pF ; Not Available          ;
+; TTL          ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                          ;
++----------------------------+------------+------+--------------------------------+--------------+
+; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name            ; Library Name ;
++----------------------------+------------+------+--------------------------------+--------------+
+; |fillpills                 ; 105        ; 40   ; |fillpills                     ; work         ;
+;    |counter_10:cnt_bo|     ; 6          ; 0    ; |fillpills|counter_10:cnt_bo   ; work         ;
+;    |counter_10:cnt_bt|     ; 5          ; 0    ; |fillpills|counter_10:cnt_bt   ; work         ;
+;    |counter_10:cnt_cpo|    ; 7          ; 0    ; |fillpills|counter_10:cnt_cpo  ; work         ;
+;    |counter_10:cnt_cpt|    ; 5          ; 0    ; |fillpills|counter_10:cnt_cpt  ; work         ;
+;    |counter_10:cnt_tph|    ; 6          ; 0    ; |fillpills|counter_10:cnt_tph  ; work         ;
+;    |counter_10:cnt_tpo|    ; 6          ; 0    ; |fillpills|counter_10:cnt_tpo  ; work         ;
+;    |counter_10:cnt_tpth|   ; 5          ; 0    ; |fillpills|counter_10:cnt_tpth ; work         ;
+;    |counter_10:cnt_tpt|    ; 6          ; 0    ; |fillpills|counter_10:cnt_tpt  ; work         ;
++----------------------------+------------+------+--------------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                              ;
++-----------------------+----------+---------+--------------+--------+----------------------+------------------+
+; Name                  ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ;
++-----------------------+----------+---------+--------------+--------+----------------------+------------------+
+; Equal1~12             ; LC41     ; 10      ; Clock        ; no     ; --                   ; --               ;
+; Equal1~16             ; LC9      ; 10      ; Clock        ; no     ; --                   ; --               ;
+; Equal1~28             ; SEXP28   ; 5       ; Clock        ; no     ; --                   ; --               ;
+; Equal1~29             ; SEXP29   ; 5       ; Clock        ; no     ; --                   ; --               ;
+; Equal1~30             ; SEXP30   ; 5       ; Clock        ; no     ; --                   ; --               ;
+; Equal1~31             ; SEXP32   ; 5       ; Clock        ; no     ; --                   ; --               ;
+; Equal2~36             ; SEXP17   ; 5       ; Clock        ; no     ; --                   ; --               ;
+; Equal2~37             ; SEXP18   ; 5       ; Clock        ; no     ; --                   ; --               ;
+; Equal2~38             ; SEXP19   ; 5       ; Clock        ; no     ; --                   ; --               ;
+; Equal2~39             ; SEXP21   ; 5       ; Clock        ; no     ; --                   ; --               ;
+; Equal2~40             ; SEXP22   ; 5       ; Clock        ; no     ; --                   ; --               ;
+; Equal2~41             ; SEXP24   ; 5       ; Clock        ; no     ; --                   ; --               ;
+; Equal2~42             ; SEXP25   ; 5       ; Clock        ; no     ; --                   ; --               ;
+; Equal2~43             ; SEXP26   ; 5       ; Clock        ; no     ; --                   ; --               ;
+; clk                   ; PIN_58   ; 5       ; Clock        ; no     ; --                   ; --               ;
+; clk_1hz               ; LC84     ; 8       ; Clock        ; no     ; --                   ; --               ;
+; clk_in~6              ; LC86     ; 11      ; Clock        ; no     ; --                   ; --               ;
+; clr                   ; PIN_63   ; 40      ; Async. clear ; no     ; --                   ; --               ;
+; counter_10:cnt_bo|co  ; LC20     ; 5       ; Clock        ; no     ; --                   ; --               ;
+; counter_10:cnt_cpo|co ; LC67     ; 6       ; Clock        ; no     ; --                   ; --               ;
+; counter_10:cnt_tph|co ; LC120    ; 5       ; Clock        ; no     ; --                   ; --               ;
+; counter_10:cnt_tpo|co ; LC52     ; 6       ; Clock        ; no     ; --                   ; --               ;
+; counter_10:cnt_tpt|co ; LC60     ; 6       ; Clock        ; no     ; --                   ; --               ;
+; cpo_rst~17            ; SEXP66   ; 4       ; Async. clear ; no     ; --                   ; --               ;
+; cpo_rst~18            ; SEXP81   ; 2       ; Async. clear ; no     ; --                   ; --               ;
+; cpo_rst~9             ; SEXP15   ; 2       ; Async. clear ; no     ; --                   ; --               ;
+; qd                    ; PIN_60   ; 17      ; Clock        ; no     ; --                   ; --               ;
++-----------------------+----------+---------+--------------+--------+----------------------+------------------+
+
+
++---------------------------------------+
+; Non-Global High Fan-Out Signals       ;
++-----------------------------+---------+
+; Name                        ; Fan-Out ;
++-----------------------------+---------+
+; mode                        ; 84      ;
+; clr                         ; 40      ;
+; working                     ; 38      ;
+; input_control[1]            ; 20      ;
+; input_control[0]            ; 20      ;
+; qd                          ; 17      ;
+; input[3]                    ; 17      ;
+; input[2]                    ; 17      ;
+; input[1]                    ; 17      ;
+; display_mode                ; 16      ;
+; counter_10:cnt_cpo|cnt_l[0] ; 15      ;
+; counter_10:cnt_cpo|cnt_l[1] ; 15      ;
+; counter_10:cnt_cpt|cnt_l[0] ; 13      ;
+; counter_10:cnt_cpt|cnt_l[1] ; 13      ;
+; counter_10:cnt_cpt|cnt_l[2] ; 12      ;
+; clk_in~6                    ; 11      ;
+; counter_10:cnt_cpt|cnt_l[3] ; 11      ;
+; npo[1]                      ; 10      ;
+; npo[0]                      ; 10      ;
+; npt[3]                      ; 10      ;
+; npt[2]                      ; 10      ;
+; npt[1]                      ; 10      ;
+; npt[0]                      ; 10      ;
+; Equal1~16                   ; 10      ;
+; Equal1~12                   ; 10      ;
+; clk_1hz                     ; 8       ;
+; Equal3~16sexp2bal           ; 7       ;
+; Equal3~8sexp1bal            ; 7       ;
+; Equal4~12sexp2bal           ; 7       ;
+; Equal4~4sexp1bal            ; 7       ;
+; counter_10:cnt_bo|cnt_l[1]  ; 7       ;
+; counter_10:cnt_bo|cnt_l[0]  ; 7       ;
+; counter_10:cnt_cpo|cnt_l[2] ; 7       ;
+; counter_10:cnt_tph|cnt_l[1] ; 6       ;
+; counter_10:cnt_tph|cnt_l[0] ; 6       ;
+; counter_10:cnt_tpt|cnt_l[1] ; 6       ;
+; counter_10:cnt_tpt|co       ; 6       ;
+; counter_10:cnt_tpt|cnt_l[0] ; 6       ;
+; counter_10:cnt_tpo|cnt_l[1] ; 6       ;
+; counter_10:cnt_tpo|co       ; 6       ;
+; counter_10:cnt_tpo|cnt_l[0] ; 6       ;
+; counter_10:cnt_bt|cnt_l[1]  ; 6       ;
+; counter_10:cnt_bt|cnt_l[2]  ; 6       ;
+; counter_10:cnt_bt|cnt_l[0]  ; 6       ;
+; counter_10:cnt_bo|cnt_l[3]  ; 6       ;
+; counter_10:cnt_bo|cnt_l[2]  ; 6       ;
+; counter_10:cnt_cpo|co       ; 6       ;
+; counter_10:cnt_cpo|cnt_l[3] ; 6       ;
+; Equal1~31                   ; 5       ;
+; Equal1~30                   ; 5       ;
++-----------------------------+---------+
+
+
++-------------------------------------------------+
+; Interconnect Usage Summary                      ;
++----------------------------+--------------------+
+; Interconnect Resource Type ; Usage              ;
++----------------------------+--------------------+
+; Output enables             ; 4 / 6 ( 67 % )     ;
+; PIA buffers                ; 198 / 288 ( 69 % ) ;
+; PIAs                       ; 223 / 288 ( 77 % ) ;
++----------------------------+--------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB External Interconnect                                                   ;
++-----------------------------------------------+-----------------------------+
+; LAB External Interconnects  (Average = 27.88) ; Number of LABs  (Total = 8) ;
++-----------------------------------------------+-----------------------------+
+; 0 - 2                                         ; 0                           ;
+; 3 - 5                                         ; 0                           ;
+; 6 - 8                                         ; 0                           ;
+; 9 - 11                                        ; 0                           ;
+; 12 - 14                                       ; 0                           ;
+; 15 - 17                                       ; 0                           ;
+; 18 - 20                                       ; 1                           ;
+; 21 - 23                                       ; 2                           ;
+; 24 - 26                                       ; 0                           ;
+; 27 - 29                                       ; 0                           ;
+; 30 - 32                                       ; 5                           ;
++-----------------------------------------------+-----------------------------+
+
+
++-----------------------------------------------------------------------+
+; LAB Macrocells                                                        ;
++-----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 13.13) ; Number of LABs  (Total = 8) ;
++-----------------------------------------+-----------------------------+
+; 0                                       ; 0                           ;
+; 1                                       ; 0                           ;
+; 2                                       ; 0                           ;
+; 3                                       ; 0                           ;
+; 4                                       ; 0                           ;
+; 5                                       ; 0                           ;
+; 6                                       ; 0                           ;
+; 7                                       ; 0                           ;
+; 8                                       ; 1                           ;
+; 9                                       ; 0                           ;
+; 10                                      ; 1                           ;
+; 11                                      ; 1                           ;
+; 12                                      ; 0                           ;
+; 13                                      ; 0                           ;
+; 14                                      ; 2                           ;
+; 15                                      ; 0                           ;
+; 16                                      ; 3                           ;
++-----------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------+
+; Parallel Expander                                       ;
++--------------------------+------------------------------+
+; Parallel Expander Length ; Number of Parallel Expanders ;
++--------------------------+------------------------------+
+; 0                        ; 0                            ;
+; 1                        ; 9                            ;
++--------------------------+------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Shareable Expander                                                            ;
++-------------------------------------------------+-----------------------------+
+; Number of shareable expanders  (Average = 6.88) ; Number of LABs  (Total = 4) ;
++-------------------------------------------------+-----------------------------+
+; 0                                               ; 4                           ;
+; 1                                               ; 0                           ;
+; 2                                               ; 0                           ;
+; 3                                               ; 0                           ;
+; 4                                               ; 0                           ;
+; 5                                               ; 0                           ;
+; 6                                               ; 0                           ;
+; 7                                               ; 0                           ;
+; 8                                               ; 0                           ;
+; 9                                               ; 0                           ;
+; 10                                              ; 0                           ;
+; 11                                              ; 0                           ;
+; 12                                              ; 1                           ;
+; 13                                              ; 0                           ;
+; 14                                              ; 2                           ;
+; 15                                              ; 1                           ;
++-------------------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
++-----+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                                                                                                                                                                                                                                                                       ; Output                                                                                                                                                                                                                                                                                         ;
++-----+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC8        ; input[3], input[2], input_control[1], input_control[0], mode, nbo[2], input[1], qd                                                                                                                                                                                                                                                                          ; nbo[2], lg3[2]~50, Equal3~8sexp1bal                                                                                                                                                                                                                                                            ;
+;  A  ; LC11       ; input[3], input[1], input_control[1], input_control[0], mode, nbo[1], input[2], qd                                                                                                                                                                                                                                                                          ; nbo[1], lg3[1]~58, Equal3~8sexp1bal                                                                                                                                                                                                                                                            ;
+;  A  ; LC5        ; input[2], input[1], input[3], input_control[1], input_control[0], mode, npt[3], qd                                                                                                                                                                                                                                                                          ; npt[3], lg6[3]~55, Equal2~16sexp1, Equal2~16sexp2, Equal2~26, Equal2~27, Equal2~34, Equal2~35, Equal2~42, Equal2~43                                                                                                                                                                            ;
+;  A  ; LC4        ; counter_10:cnt_cpo|cnt_l[2], counter_10:cnt_cpo|cnt_l[3], counter_10:cnt_cpo|cnt_l[1], mode, working, counter_10:cnt_cpo|cnt_l[0], clk_in~6, cpo_rst~9                                                                                                                                                                                                      ; counter_10:cnt_cpo|cnt_l[1], counter_10:cnt_cpo|cnt_l[2], counter_10:cnt_cpo|cnt_l[3], lg5[1]~57, counter_10:cnt_cpo|cnt_l[3]~49, counter_10:cnt_cpo|co, counter_10:cnt_cpo|Equal0~2sexp, Equal1~8sexp1, Equal1~8sexp2, Equal1~22, Equal1~23, Equal1~26, Equal1~27, Equal1~30, Equal1~31       ;
+;  A  ; LC16       ; input[2], input[1], input[3], input_control[1], input_control[0], mode, npo[3], qd                                                                                                                                                                                                                                                                          ; Equal1~16, npo[3], lg5[3]~53                                                                                                                                                                                                                                                                   ;
+;  A  ; LC9        ; npo[3], counter_10:cnt_cpo|cnt_l[3]                                                                                                                                                                                                                                                                                                                         ; counter_10:cnt_cpo|co, counter_10:cnt_bo|cnt_l[0], counter_10:cnt_bo|cnt_l[1], counter_10:cnt_bo|cnt_l[2], counter_10:cnt_bo|cnt_l[3], counter_10:cnt_bo|co, counter_10:cnt_cpo|co~14, cocbo~6sexp, cocbo~7, cocbo~8                                                                           ;
+;  A  ; LC14       ; input[2], input[1], input[3], input_control[1], input_control[0], mode, nbo[3], qd                                                                                                                                                                                                                                                                          ; nbo[3], lg3[3]~54, Equal3~8sexp1bal, Equal3~16sexp2bal                                                                                                                                                                                                                                         ;
+;  A  ; LC3        ; input[3], input[1], input_control[1], input_control[0], mode, npo[1], input[2], qd                                                                                                                                                                                                                                                                          ; npo[1], lg5[1]~57, Equal1~8sexp1, Equal1~8sexp2, Equal1~22, Equal1~23, Equal1~26, Equal1~27, Equal1~30, Equal1~31                                                                                                                                                                              ;
+;  A  ; LC15       ; input[3], input[1], input_control[1], input_control[0], mode, nbt[1], input[2], qd                                                                                                                                                                                                                                                                          ; nbt[1], lg4[1]~57, Equal4~4sexp1bal                                                                                                                                                                                                                                                            ;
+;  A  ; LC10       ; input[3], input[2], input_control[1], input_control[0], mode, npo[2], input[1], qd                                                                                                                                                                                                                                                                          ; Equal1~12, npo[2], lg5[2]~49                                                                                                                                                                                                                                                                   ;
+;  A  ; LC7        ; input[3], input[1], input_control[1], input_control[0], mode, npt[1], input[2], qd                                                                                                                                                                                                                                                                          ; npt[1], lg6[1]~59, Equal2~8sexp1, Equal2~8sexp2, Equal2~22, Equal2~23, Equal2~30, Equal2~31, Equal2~38, Equal2~39                                                                                                                                                                              ;
+;  A  ; LC12       ; input[3], input[2], input_control[1], input_control[0], mode, npt[2], input[1], qd                                                                                                                                                                                                                                                                          ; npt[2], lg6[2]~51, Equal2~12sexp1, Equal2~12sexp2, Equal2~24, Equal2~25, Equal2~32, Equal2~33, Equal2~40, Equal2~41                                                                                                                                                                            ;
+;  A  ; LC1        ; mode, counter_10:cnt_cpo|cnt_l[0], counter_10:cnt_cpo|cnt_l[2], counter_10:cnt_cpo|cnt_l[1]                                                                                                                                                                                                                                                                 ; counter_10:cnt_cpo|cnt_l[3]                                                                                                                                                                                                                                                                    ;
+;  A  ; LC2        ; counter_10:cnt_cpo|cnt_l[3]~49, counter_10:cnt_cpo|cnt_l[0], working, counter_10:cnt_cpo|cnt_l[2], counter_10:cnt_cpo|cnt_l[1], mode, counter_10:cnt_cpo|cnt_l[3], clk_in~6, cpo_rst~9                                                                                                                                                                      ; counter_10:cnt_cpo|cnt_l[1], Equal1~16, counter_10:cnt_cpo|cnt_l[3], lg5[3]~53, counter_10:cnt_cpo|co, counter_10:cnt_cpo|Equal0~2sexp                                                                                                                                                         ;
+;  B  ; LC20       ; counter_10:cnt_bo|cnt_l[0], counter_10:cnt_bo|cnt_l[1], counter_10:cnt_bo|cnt_l[2], counter_10:cnt_bo|cnt_l[3], clr, mode, working, counter_10:cnt_bo|co, Equal1~12, Equal1~16, Equal2~36, Equal2~37, Equal2~38, Equal2~39, Equal2~40, Equal2~41, Equal2~42, Equal2~43, Equal1~28, Equal1~29, Equal1~30, Equal1~31                                          ; counter_10:cnt_bo|co, counter_10:cnt_bt|cnt_l[0], counter_10:cnt_bt|cnt_l[2], counter_10:cnt_bt|cnt_l[3], counter_10:cnt_bt|cnt_l[1]                                                                                                                                                           ;
+;  B  ; LC26       ; mode, working, counter_10:cnt_bo|co, clr                                                                                                                                                                                                                                                                                                                    ; counter_10:cnt_bt|cnt_l[2], counter_10:cnt_bt|cnt_l[3], counter_10:cnt_bt|cnt_l[1], lg4[0]~45, counter_10:cnt_bt|cnt_l[3]~49, Equal4~4sexp1bal                                                                                                                                                 ;
+;  B  ; LC28       ; mode, working, counter_10:cnt_tph|co, clr                                                                                                                                                                                                                                                                                                                   ; lg6[0]~47, counter_10:cnt_tpth|cnt_l[2], counter_10:cnt_tpth|cnt_l[3], counter_10:cnt_tpth|cnt_l[1], counter_10:cnt_tpth|cnt_l[3]~49                                                                                                                                                           ;
+;  B  ; LC22       ; mode, counter_10:cnt_bo|cnt_l[0], counter_10:cnt_bo|cnt_l[2], counter_10:cnt_bo|cnt_l[1]                                                                                                                                                                                                                                                                    ; counter_10:cnt_bo|cnt_l[3]                                                                                                                                                                                                                                                                     ;
+;  B  ; LC29       ; nbo[3], counter_10:cnt_bo|cnt_l[3]                                                                                                                                                                                                                                                                                                                          ; red_light~4, buzzer_count[0], process_2~4, red_light~7, buzzer_count[1], buzzer_count[2], buzzer~8                                                                                                                                                                                             ;
+;  B  ; LC31       ; counter_10:cnt_bo|cnt_l[2], counter_10:cnt_bo|cnt_l[3], counter_10:cnt_bo|cnt_l[1], mode, working, counter_10:cnt_bo|cnt_l[0], Equal1~12, Equal1~16, clr, Equal2~36, Equal2~37, Equal2~38, Equal2~39, Equal2~40, Equal2~41, Equal2~42, Equal2~43, Equal1~28, Equal1~29, Equal1~30, Equal1~31                                                                ; counter_10:cnt_bo|cnt_l[1], counter_10:cnt_bo|cnt_l[2], counter_10:cnt_bo|cnt_l[3], counter_10:cnt_bo|co, lg3[1]~58, counter_10:cnt_bo|cnt_l[3]~49, Equal3~8sexp1bal                                                                                                                           ;
+;  B  ; LC24       ; nbo[3], mode, counter_10:cnt_tpo|cnt_l[3], display_mode, counter_10:cnt_bo|cnt_l[3]                                                                                                                                                                                                                                                                         ; lg3[3]                                                                                                                                                                                                                                                                                         ;
+;  B  ; LC25       ; nbo[2], mode, counter_10:cnt_tpo|cnt_l[2], display_mode, counter_10:cnt_bo|cnt_l[2]                                                                                                                                                                                                                                                                         ; lg3[2]                                                                                                                                                                                                                                                                                         ;
+;  B  ; LC27       ; nbo[1], counter_10:cnt_bo|cnt_l[1], nbo[2], counter_10:cnt_bo|cnt_l[2], nbo[3], counter_10:cnt_bo|cnt_l[3]                                                                                                                                                                                                                                                  ; red_light~4, buzzer_count[0], process_2~4, red_light~7, buzzer_count[1], buzzer_count[2], buzzer~8                                                                                                                                                                                             ;
+;  B  ; LC18       ; mode, counter_10:cnt_bo|cnt_l[0], counter_10:cnt_bo|cnt_l[1], working, Equal1~12, Equal1~16, clr, Equal2~36, Equal2~37, Equal2~38, Equal2~39, Equal2~40, Equal2~41, Equal2~42, Equal2~43, Equal1~28, Equal1~29, Equal1~30, Equal1~31                                                                                                                        ; counter_10:cnt_bo|cnt_l[1], counter_10:cnt_bo|cnt_l[3], counter_10:cnt_bo|co, lg3[2]~50, counter_10:cnt_bo|cnt_l[3]~49, Equal3~8sexp1bal                                                                                                                                                       ;
+;  B  ; LC19       ; npt[1], mode, counter_10:cnt_tpth|cnt_l[1], display_mode, counter_10:cnt_cpt|cnt_l[1]                                                                                                                                                                                                                                                                       ; lg6[1]                                                                                                                                                                                                                                                                                         ;
+;  B  ; LC23       ; counter_10:cnt_bo|cnt_l[3]~49, counter_10:cnt_bo|cnt_l[0], working, counter_10:cnt_bo|cnt_l[2], counter_10:cnt_bo|cnt_l[1], mode, counter_10:cnt_bo|cnt_l[3], Equal1~12, Equal1~16, clr, Equal2~36, Equal2~37, Equal2~38, Equal2~39, Equal2~40, Equal2~41, Equal2~42, Equal2~43, Equal1~28, Equal1~29, Equal1~30, Equal1~31                                 ; counter_10:cnt_bo|cnt_l[1], counter_10:cnt_bo|cnt_l[3], counter_10:cnt_bo|co, lg3[3]~54, Equal3~8sexp1bal, Equal3~16sexp2bal                                                                                                                                                                   ;
+;  B  ; LC17       ; npt[2], mode, counter_10:cnt_tpth|cnt_l[2], display_mode, counter_10:cnt_cpt|cnt_l[2]                                                                                                                                                                                                                                                                       ; lg6[2]                                                                                                                                                                                                                                                                                         ;
+;  B  ; LC32       ; mode, counter_10:cnt_tpth|cnt_l[0], counter_10:cnt_tpth|cnt_l[1], working, counter_10:cnt_tph|co, clr                                                                                                                                                                                                                                                       ; lg6[2]~51, counter_10:cnt_tpth|cnt_l[3], counter_10:cnt_tpth|cnt_l[1], counter_10:cnt_tpth|cnt_l[3]~49                                                                                                                                                                                         ;
+;  B  ; LC21       ; npt[0], mode, counter_10:cnt_tpth|cnt_l[0], display_mode, counter_10:cnt_cpt|cnt_l[0]                                                                                                                                                                                                                                                                       ; lg6[0]                                                                                                                                                                                                                                                                                         ;
+;  B  ; LC30       ; mode, working, Equal1~12, Equal1~16, clr, Equal2~36, Equal2~37, Equal2~38, Equal2~39, Equal2~40, Equal2~41, Equal2~42, Equal2~43, Equal1~28, Equal1~29, Equal1~30, Equal1~31                                                                                                                                                                                ; counter_10:cnt_bo|cnt_l[1], counter_10:cnt_bo|cnt_l[2], counter_10:cnt_bo|cnt_l[3], counter_10:cnt_bo|co, lg3[0]~46, counter_10:cnt_bo|cnt_l[3]~49, Equal4~12sexp2bal                                                                                                                          ;
+;  C  ; LC35       ; nbt[1], mode, counter_10:cnt_tpt|cnt_l[1], display_mode, counter_10:cnt_bt|cnt_l[1]                                                                                                                                                                                                                                                                         ; lg4[1]                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC37       ; nbt[0], mode, counter_10:cnt_tpt|cnt_l[0], display_mode, counter_10:cnt_bt|cnt_l[0]                                                                                                                                                                                                                                                                         ; lg4[0]                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC46       ; npt[3], mode, counter_10:cnt_tpth|cnt_l[3], display_mode, counter_10:cnt_cpt|cnt_l[3]                                                                                                                                                                                                                                                                       ; lg6[3]                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC38       ; npo[3], mode, counter_10:cnt_tph|cnt_l[3], display_mode, counter_10:cnt_cpo|cnt_l[3]                                                                                                                                                                                                                                                                        ; lg5[3]                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC43       ; npo[1], mode, counter_10:cnt_tph|cnt_l[1], display_mode, counter_10:cnt_cpo|cnt_l[1]                                                                                                                                                                                                                                                                        ; lg5[1]                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC41       ; npo[2], counter_10:cnt_cpo|cnt_l[2]                                                                                                                                                                                                                                                                                                                         ; counter_10:cnt_cpo|co, counter_10:cnt_bo|cnt_l[0], counter_10:cnt_bo|cnt_l[1], counter_10:cnt_bo|cnt_l[2], counter_10:cnt_bo|cnt_l[3], counter_10:cnt_bo|co, counter_10:cnt_cpo|co~14, cocbo~6sexp, cocbo~7, cocbo~8                                                                           ;
+;  C  ; LC45       ; npo[0], mode, counter_10:cnt_tph|cnt_l[0], display_mode, counter_10:cnt_cpo|cnt_l[0]                                                                                                                                                                                                                                                                        ; lg5[0]                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC40       ; npo[2], mode, counter_10:cnt_tph|cnt_l[2], display_mode, counter_10:cnt_cpo|cnt_l[2]                                                                                                                                                                                                                                                                        ; lg5[2]                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC55       ; counter_10:cnt_tpo|cnt_l[3]~49, counter_10:cnt_tpo|cnt_l[0], working, counter_10:cnt_tpo|cnt_l[2], counter_10:cnt_tpo|cnt_l[1], mode, counter_10:cnt_tpo|cnt_l[3], clk_in~6, clr                                                                                                                                                                            ; counter_10:cnt_tpo|cnt_l[3], counter_10:cnt_tpo|co, lg3[3]~54, counter_10:cnt_tpo|cnt_l[1]                                                                                                                                                                                                     ;
+;  D  ; LC52       ; counter_10:cnt_tpo|cnt_l[0], counter_10:cnt_tpo|cnt_l[1], counter_10:cnt_tpo|cnt_l[2], counter_10:cnt_tpo|cnt_l[3], clr, mode, working, counter_10:cnt_tpo|co, clk_in~6                                                                                                                                                                                     ; counter_10:cnt_tpo|co, counter_10:cnt_tpt|cnt_l[0], counter_10:cnt_tpt|cnt_l[2], counter_10:cnt_tpt|cnt_l[3], counter_10:cnt_tpt|co, counter_10:cnt_tpt|cnt_l[1]                                                                                                                               ;
+;  D  ; LC58       ; counter_10:cnt_tpo|cnt_l[2], counter_10:cnt_tpo|cnt_l[3], counter_10:cnt_tpo|cnt_l[1], mode, working, counter_10:cnt_tpo|cnt_l[0], clk_in~6, clr                                                                                                                                                                                                            ; counter_10:cnt_tpo|cnt_l[2], counter_10:cnt_tpo|cnt_l[3], counter_10:cnt_tpo|co, counter_10:cnt_tpo|cnt_l[1], lg3[1]~58, counter_10:cnt_tpo|cnt_l[3]~49                                                                                                                                        ;
+;  D  ; LC57       ; nbo[1], mode, counter_10:cnt_tpo|cnt_l[1], display_mode, counter_10:cnt_bo|cnt_l[1]                                                                                                                                                                                                                                                                         ; lg3[1]                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC63       ; counter_10:cnt_tpt|cnt_l[3]~49, counter_10:cnt_tpt|cnt_l[0], working, counter_10:cnt_tpt|cnt_l[2], counter_10:cnt_tpt|cnt_l[1], mode, counter_10:cnt_tpt|cnt_l[3], counter_10:cnt_tpo|co, clr                                                                                                                                                               ; counter_10:cnt_tpt|cnt_l[3], counter_10:cnt_tpt|co, lg4[3]~53, counter_10:cnt_tpt|cnt_l[1]                                                                                                                                                                                                     ;
+;  D  ; LC60       ; counter_10:cnt_tpt|cnt_l[0], counter_10:cnt_tpt|cnt_l[1], counter_10:cnt_tpt|cnt_l[2], counter_10:cnt_tpt|cnt_l[3], clr, mode, working, counter_10:cnt_tpt|co, counter_10:cnt_tpo|co                                                                                                                                                                        ; counter_10:cnt_tpt|co, counter_10:cnt_tph|cnt_l[0], counter_10:cnt_tph|cnt_l[2], counter_10:cnt_tph|cnt_l[3], counter_10:cnt_tph|co, counter_10:cnt_tph|cnt_l[1]                                                                                                                               ;
+;  D  ; LC61       ; nbt[3], mode, counter_10:cnt_tpt|cnt_l[3], display_mode, counter_10:cnt_bt|cnt_l[3]                                                                                                                                                                                                                                                                         ; lg4[3]                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC50       ; counter_10:cnt_tpt|cnt_l[2], counter_10:cnt_tpt|cnt_l[3], counter_10:cnt_tpt|cnt_l[1], mode, working, counter_10:cnt_tpt|cnt_l[0], counter_10:cnt_tpo|co, clr                                                                                                                                                                                               ; counter_10:cnt_tpt|cnt_l[2], counter_10:cnt_tpt|cnt_l[3], counter_10:cnt_tpt|co, counter_10:cnt_tpt|cnt_l[1], lg4[1]~57, counter_10:cnt_tpt|cnt_l[3]~49                                                                                                                                        ;
+;  D  ; LC54       ; mode, counter_10:cnt_tpo|cnt_l[0], counter_10:cnt_tpo|cnt_l[2], counter_10:cnt_tpo|cnt_l[1]                                                                                                                                                                                                                                                                 ; counter_10:cnt_tpo|cnt_l[3]                                                                                                                                                                                                                                                                    ;
+;  D  ; LC62       ; mode, counter_10:cnt_tpt|cnt_l[0], counter_10:cnt_tpt|cnt_l[2], counter_10:cnt_tpt|cnt_l[1]                                                                                                                                                                                                                                                                 ; counter_10:cnt_tpt|cnt_l[3]                                                                                                                                                                                                                                                                    ;
+;  D  ; LC56       ;                                                                                                                                                                                                                                                                                                                                                             ; lg2[0]                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC53       ;                                                                                                                                                                                                                                                                                                                                                             ; lg2[1]                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC51       ;                                                                                                                                                                                                                                                                                                                                                             ; lg2[2]                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC49       ;                                                                                                                                                                                                                                                                                                                                                             ; lg2[3]                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC64       ; nbt[2], mode, counter_10:cnt_tpt|cnt_l[2], display_mode, counter_10:cnt_bt|cnt_l[2]                                                                                                                                                                                                                                                                         ; lg4[2]                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC59       ; nbo[0], mode, counter_10:cnt_tpo|cnt_l[0], display_mode, counter_10:cnt_bo|cnt_l[0]                                                                                                                                                                                                                                                                         ; lg3[0]                                                                                                                                                                                                                                                                                         ;
+;  E  ; LC65       ; mode, working, clk_in~6, cpo_rst~17                                                                                                                                                                                                                                                                                                                         ; counter_10:cnt_cpo|cnt_l[1], counter_10:cnt_cpo|cnt_l[2], counter_10:cnt_cpo|cnt_l[3], lg5[0]~45, counter_10:cnt_cpo|cnt_l[3]~49, counter_10:cnt_cpo|co, counter_10:cnt_cpo|Equal0~2sexp, Equal1~4sexp1, Equal1~4sexp2, Equal1~20, Equal1~21, Equal1~24, Equal1~25, Equal1~28, Equal1~29       ;
+;  E  ; LC79       ; mode, counter_10:cnt_cpt|cnt_l[0], counter_10:cnt_cpt|cnt_l[1], working, counter_10:cnt_cpo|co, cpo_rst~17                                                                                                                                                                                                                                                  ; counter_10:cnt_cpt|cnt_l[3], counter_10:cnt_cpt|cnt_l[1], lg6[2]~51, counter_10:cnt_cpt|cnt_l[3]~49, Equal2~12sexp1, Equal2~12sexp2, Equal2~24, Equal2~25, Equal2~32, Equal2~33, Equal2~40, Equal2~41                                                                                          ;
+;  E  ; LC67       ; counter_10:cnt_cpo|co~14, counter_10:cnt_cpo|co, clr, Equal1~12, Equal1~16, clk_in~6, mode, working, counter_10:cnt_cpo|cnt_l[0], counter_10:cnt_cpo|cnt_l[1], counter_10:cnt_cpo|cnt_l[2], counter_10:cnt_cpo|cnt_l[3], Equal2~20, Equal2~21, Equal2~22, Equal2~23, Equal2~24, Equal2~25, Equal2~26, Equal2~27, Equal1~20, Equal1~21, Equal1~22, Equal1~23 ; counter_10:cnt_cpt|cnt_l[2], counter_10:cnt_cpt|cnt_l[3], counter_10:cnt_cpt|cnt_l[1], counter_10:cnt_cpo|co, counter_10:cnt_cpt|cnt_l[0], counter_10:cnt_cpo|co~14                                                                                                                            ;
+;  E  ; LC75       ; clr, error, Equal4~4sexp1bal, Equal4~12sexp2bal, Equal3~8sexp1bal, Equal3~16sexp2bal                                                                                                                                                                                                                                                                        ; green_light                                                                                                                                                                                                                                                                                    ;
+;  E  ; LC71       ; mode, counter_10:cnt_bt|cnt_l[0], counter_10:cnt_bt|cnt_l[1], working, counter_10:cnt_bo|co, clr                                                                                                                                                                                                                                                            ; counter_10:cnt_bt|cnt_l[3], counter_10:cnt_bt|cnt_l[1], lg4[2]~49, counter_10:cnt_bt|cnt_l[3]~49, Equal4~4sexp1bal, Equal4~12sexp2bal                                                                                                                                                          ;
+;  E  ; LC73       ; clr, error, Equal4~4sexp1bal, Equal4~12sexp2bal, Equal3~8sexp1bal, Equal3~16sexp2bal                                                                                                                                                                                                                                                                        ; red_light                                                                                                                                                                                                                                                                                      ;
+;  E  ; LC77       ; mode, counter_10:cnt_cpo|cnt_l[0], counter_10:cnt_cpo|cnt_l[1], working, clk_in~6, cpo_rst~17                                                                                                                                                                                                                                                               ; counter_10:cnt_cpo|cnt_l[1], Equal1~12, counter_10:cnt_cpo|cnt_l[3], lg5[2]~49, counter_10:cnt_cpo|cnt_l[3]~49, counter_10:cnt_cpo|co, counter_10:cnt_cpo|Equal0~2sexp                                                                                                                         ;
+;  E  ; LC74       ; mode, working, counter_10:cnt_cpo|co, cpo_rst~17                                                                                                                                                                                                                                                                                                            ; counter_10:cnt_cpt|cnt_l[2], counter_10:cnt_cpt|cnt_l[3], counter_10:cnt_cpt|cnt_l[1], lg6[0]~47, counter_10:cnt_cpt|cnt_l[3]~49, Equal2~4sexp1, Equal2~4sexp2, Equal2~20, Equal2~21, Equal2~28, Equal2~29, Equal2~36, Equal2~37                                                               ;
+;  E  ; LC76       ; mode, working, clk_in~6, clr                                                                                                                                                                                                                                                                                                                                ; lg3[0]~46, counter_10:cnt_tpo|cnt_l[2], counter_10:cnt_tpo|cnt_l[3], counter_10:cnt_tpo|co, counter_10:cnt_tpo|cnt_l[1], counter_10:cnt_tpo|cnt_l[3]~49                                                                                                                                        ;
+;  E  ; LC66       ; counter_10:cnt_cpo|co, clr, Equal1~12, Equal1~16, mode, working, counter_10:cnt_cpo|Equal0~2sexp, Equal2~20, Equal2~21, Equal2~22, Equal2~23, Equal2~24, Equal2~25, Equal2~26, Equal2~27, Equal1~20, Equal1~21, Equal1~22, Equal1~23                                                                                                                        ; counter_10:cnt_cpo|co                                                                                                                                                                                                                                                                          ;
+;  E  ; LC80       ; clk_1hz, error, clk_buzzer, clr, buzzer_count[2], Equal4~4sexp1bal, Equal4~12sexp2bal, Equal3~8sexp1bal, Equal3~16sexp2bal                                                                                                                                                                                                                                  ; buzzer                                                                                                                                                                                                                                                                                         ;
+;  F  ; LC92       ; temp[0], clk                                                                                                                                                                                                                                                                                                                                                ; temp[0], temp[2], clk_1hz                                                                                                                                                                                                                                                                      ;
+;  F  ; LC82       ; counter_10:cnt_cpt|cnt_l[3]~49, counter_10:cnt_cpt|cnt_l[0], working, counter_10:cnt_cpt|cnt_l[2], counter_10:cnt_cpt|cnt_l[1], mode, counter_10:cnt_cpt|cnt_l[3], counter_10:cnt_cpo|co, cpo_rst~18                                                                                                                                                        ; counter_10:cnt_cpt|cnt_l[3], counter_10:cnt_cpt|cnt_l[1], lg6[3]~55, Equal2~16sexp1, Equal2~16sexp2, Equal2~26, Equal2~27, Equal2~34, Equal2~35, Equal2~42, Equal2~43                                                                                                                          ;
+;  F  ; LC85       ; counter_10:cnt_cpt|cnt_l[2], counter_10:cnt_cpt|cnt_l[3], counter_10:cnt_cpt|cnt_l[1], mode, working, counter_10:cnt_cpt|cnt_l[0], counter_10:cnt_cpo|co, cpo_rst~18                                                                                                                                                                                        ; counter_10:cnt_cpt|cnt_l[2], counter_10:cnt_cpt|cnt_l[3], counter_10:cnt_cpt|cnt_l[1], lg6[1]~59, counter_10:cnt_cpt|cnt_l[3]~49, Equal2~8sexp1, Equal2~8sexp2, Equal2~22, Equal2~23, Equal2~30, Equal2~31, Equal2~38, Equal2~39                                                               ;
+;  F  ; LC89       ; temp[1], temp[0], temp[2], clk                                                                                                                                                                                                                                                                                                                              ; temp[0], temp[2], clk_1hz                                                                                                                                                                                                                                                                      ;
+;  F  ; LC84       ; temp[0], temp[1], temp[2], clk                                                                                                                                                                                                                                                                                                                              ; lg3[3]~41, lg4[3]~40, lg5[3]~40, lg6[3]~42, buzzer_count[0], buzzer_count[1], buzzer_count[2], buzzer~8                                                                                                                                                                                        ;
+;  F  ; LC91       ; input_control[1], input_control[0], clk_1hz, mode                                                                                                                                                                                                                                                                                                           ; lg3[0], lg3[2], lg3[3], lg3[1]                                                                                                                                                                                                                                                                 ;
+;  F  ; LC90       ; mode, working, counter_10:cnt_tpo|co, clr                                                                                                                                                                                                                                                                                                                   ; lg4[0]~45, counter_10:cnt_tpt|cnt_l[2], counter_10:cnt_tpt|cnt_l[3], counter_10:cnt_tpt|co, counter_10:cnt_tpt|cnt_l[1], counter_10:cnt_tpt|cnt_l[3]~49                                                                                                                                        ;
+;  F  ; LC81       ; mode, counter_10:cnt_cpt|cnt_l[0], counter_10:cnt_cpt|cnt_l[2], counter_10:cnt_cpt|cnt_l[1]                                                                                                                                                                                                                                                                 ; counter_10:cnt_cpt|cnt_l[3]                                                                                                                                                                                                                                                                    ;
+;  F  ; LC96       ; input_control[1], input_control[0], clk_1hz, mode                                                                                                                                                                                                                                                                                                           ; lg5[0], lg5[2], lg5[3], lg5[1]                                                                                                                                                                                                                                                                 ;
+;  F  ; LC94       ; temp[1], temp[2], temp[0], clk                                                                                                                                                                                                                                                                                                                              ; temp[0], temp[1], temp[2], clk_1hz                                                                                                                                                                                                                                                             ;
+;  F  ; LC83       ; mode, counter_10:cnt_tpo|cnt_l[0], counter_10:cnt_tpo|cnt_l[1], working, clk_in~6, clr                                                                                                                                                                                                                                                                      ; lg3[2]~50, counter_10:cnt_tpo|cnt_l[3], counter_10:cnt_tpo|co, counter_10:cnt_tpo|cnt_l[1], counter_10:cnt_tpo|cnt_l[3]~49                                                                                                                                                                     ;
+;  F  ; LC86       ; clk, process_2~4, clk_in~6                                                                                                                                                                                                                                                                                                                                  ; counter_10:cnt_cpo|cnt_l[1], counter_10:cnt_cpo|cnt_l[2], counter_10:cnt_cpo|cnt_l[3], counter_10:cnt_cpo|cnt_l[0], counter_10:cnt_cpo|co, clk_in~6, counter_10:cnt_tpo|cnt_l[0], counter_10:cnt_tpo|cnt_l[2], counter_10:cnt_tpo|cnt_l[3], counter_10:cnt_tpo|co, counter_10:cnt_tpo|cnt_l[1] ;
+;  F  ; LC87       ; mode, counter_10:cnt_tpt|cnt_l[0], counter_10:cnt_tpt|cnt_l[1], working, counter_10:cnt_tpo|co, clr                                                                                                                                                                                                                                                         ; lg4[2]~49, counter_10:cnt_tpt|cnt_l[3], counter_10:cnt_tpt|co, counter_10:cnt_tpt|cnt_l[1], counter_10:cnt_tpt|cnt_l[3]~49                                                                                                                                                                     ;
+;  F  ; LC88       ; input_control[1], input_control[0], clk_1hz, mode                                                                                                                                                                                                                                                                                                           ; lg4[0], lg4[2], lg4[3], lg4[1]                                                                                                                                                                                                                                                                 ;
+;  G  ; LC98       ; counter_10:cnt_bt|cnt_l[3]~49, counter_10:cnt_bt|cnt_l[0], working, counter_10:cnt_bt|cnt_l[2], counter_10:cnt_bt|cnt_l[1], mode, counter_10:cnt_bt|cnt_l[3], counter_10:cnt_bo|co, clr                                                                                                                                                                     ; counter_10:cnt_bt|cnt_l[3], counter_10:cnt_bt|cnt_l[1], lg4[3]~53, Equal4~12sexp2bal                                                                                                                                                                                                           ;
+;  G  ; LC104      ; input_control[1], input_control[0], clk_1hz, mode                                                                                                                                                                                                                                                                                                           ; lg6[0], lg6[2], lg6[3], lg6[1]                                                                                                                                                                                                                                                                 ;
+;  G  ; LC107      ; input[2], input[1], input[0], input_control[1], input_control[0], mode, nbt[0], input[3], qd                                                                                                                                                                                                                                                                ; nbt[0], lg4[0]~45, Equal4~4sexp1bal                                                                                                                                                                                                                                                            ;
+;  G  ; LC103      ; input[3], input[2], input_control[1], input_control[0], mode, nbt[2], input[1], qd                                                                                                                                                                                                                                                                          ; nbt[2], lg4[2]~49, Equal4~4sexp1bal, Equal4~12sexp2bal                                                                                                                                                                                                                                         ;
+;  G  ; LC108      ; input[2], input[1], input[3], input_control[1], input_control[0], mode, nbt[3], qd                                                                                                                                                                                                                                                                          ; nbt[3], lg4[3]~53, Equal4~12sexp2bal                                                                                                                                                                                                                                                           ;
+;  G  ; LC102      ; input[2], input[1], input[0], input_control[1], input_control[0], mode, npt[0], input[3], qd                                                                                                                                                                                                                                                                ; npt[0], lg6[0]~47, Equal2~4sexp1, Equal2~4sexp2, Equal2~20, Equal2~21, Equal2~28, Equal2~29, Equal2~36, Equal2~37                                                                                                                                                                              ;
+;  G  ; LC97       ; mode, counter_10:cnt_bt|cnt_l[0], counter_10:cnt_bt|cnt_l[2], counter_10:cnt_bt|cnt_l[1]                                                                                                                                                                                                                                                                    ; counter_10:cnt_bt|cnt_l[3]                                                                                                                                                                                                                                                                     ;
+;  G  ; LC99       ; input[2], input[1], input[0], input_control[1], input_control[0], mode, npo[0], input[3], qd                                                                                                                                                                                                                                                                ; npo[0], lg5[0]~45, Equal1~4sexp1, Equal1~4sexp2, Equal1~20, Equal1~21, Equal1~24, Equal1~25, Equal1~28, Equal1~29                                                                                                                                                                              ;
+;  G  ; LC105      ; input[2], input[1], input[0], input_control[1], input_control[0], mode, nbo[0], input[3], qd                                                                                                                                                                                                                                                                ; nbo[0], lg3[0]~46, Equal4~12sexp2bal                                                                                                                                                                                                                                                           ;
+;  G  ; LC109      ; clr, mode, Equal4~4sexp1bal, Equal4~12sexp2bal, Equal3~8sexp1bal, Equal3~16sexp2bal                                                                                                                                                                                                                                                                         ; clk_in~6                                                                                                                                                                                                                                                                                       ;
+;  G  ; LC110      ; clr, buzzer_count[2], buzzer_count[1], buzzer_count[0], clk_1hz, Equal4~4sexp1bal, Equal4~12sexp2bal, Equal3~8sexp1bal, Equal3~16sexp2bal                                                                                                                                                                                                                   ; buzzer_count[0], buzzer_count[1], buzzer_count[2], buzzer~8                                                                                                                                                                                                                                    ;
+;  G  ; LC101      ; clr, buzzer_count[2], buzzer_count[0], clk_1hz, Equal4~4sexp1bal, Equal4~12sexp2bal, Equal3~8sexp1bal, Equal3~16sexp2bal                                                                                                                                                                                                                                    ; buzzer_count[0], buzzer_count[1], buzzer_count[2]                                                                                                                                                                                                                                              ;
+;  G  ; LC112      ; clr, buzzer_count[1], buzzer_count[2], buzzer_count[0], clk_1hz, Equal4~4sexp1bal, Equal4~12sexp2bal, Equal3~8sexp1bal, Equal3~16sexp2bal                                                                                                                                                                                                                   ; buzzer_count[1], buzzer_count[2]                                                                                                                                                                                                                                                               ;
+;  G  ; LC100      ; nbt[0], counter_10:cnt_bt|cnt_l[0], nbt[1], counter_10:cnt_bt|cnt_l[1], nbt[2], counter_10:cnt_bt|cnt_l[2]                                                                                                                                                                                                                                                  ; red_light~4, buzzer_count[0], process_2~4, red_light~7, buzzer_count[1], buzzer_count[2], buzzer~8                                                                                                                                                                                             ;
+;  G  ; LC111      ; nbt[2], counter_10:cnt_bt|cnt_l[2], nbt[3], counter_10:cnt_bt|cnt_l[3], nbo[0], counter_10:cnt_bo|cnt_l[0]                                                                                                                                                                                                                                                  ; red_light~4, buzzer_count[0], process_2~4, red_light~7, buzzer_count[1], buzzer_count[2], buzzer~8                                                                                                                                                                                             ;
+;  G  ; LC106      ; counter_10:cnt_bt|cnt_l[2], counter_10:cnt_bt|cnt_l[3], counter_10:cnt_bt|cnt_l[1], mode, working, counter_10:cnt_bt|cnt_l[0], counter_10:cnt_bo|co, clr                                                                                                                                                                                                    ; counter_10:cnt_bt|cnt_l[2], counter_10:cnt_bt|cnt_l[3], counter_10:cnt_bt|cnt_l[1], lg4[1]~57, counter_10:cnt_bt|cnt_l[3]~49, Equal4~4sexp1bal                                                                                                                                                 ;
+;  H  ; LC113      ; mode, counter_10:cnt_tph|cnt_l[0], counter_10:cnt_tph|cnt_l[2], counter_10:cnt_tph|cnt_l[1]                                                                                                                                                                                                                                                                 ; counter_10:cnt_tph|cnt_l[3]                                                                                                                                                                                                                                                                    ;
+;  H  ; LC115      ; mode, counter_10:cnt_tpth|cnt_l[0], counter_10:cnt_tpth|cnt_l[2], counter_10:cnt_tpth|cnt_l[1]                                                                                                                                                                                                                                                              ; counter_10:cnt_tpth|cnt_l[3]                                                                                                                                                                                                                                                                   ;
+;  H  ; LC114      ; counter_10:cnt_tph|cnt_l[3]~49, counter_10:cnt_tph|cnt_l[0], working, counter_10:cnt_tph|cnt_l[2], counter_10:cnt_tph|cnt_l[1], mode, counter_10:cnt_tph|cnt_l[3], counter_10:cnt_tpt|co, clr                                                                                                                                                               ; counter_10:cnt_tph|cnt_l[3], counter_10:cnt_tph|co, lg5[3]~53, counter_10:cnt_tph|cnt_l[1]                                                                                                                                                                                                     ;
+;  H  ; LC124      ; mode, working, counter_10:cnt_tpt|co, clr                                                                                                                                                                                                                                                                                                                   ; lg5[0]~45, counter_10:cnt_tph|cnt_l[2], counter_10:cnt_tph|cnt_l[3], counter_10:cnt_tph|co, counter_10:cnt_tph|cnt_l[1], counter_10:cnt_tph|cnt_l[3]~49                                                                                                                                        ;
+;  H  ; LC128      ; input[2], input[3], mode, input[1], error, qd                                                                                                                                                                                                                                                                                                               ; error, red_light~4, red_light~7, buzzer~8                                                                                                                                                                                                                                                      ;
+;  H  ; LC116      ; counter_10:cnt_tpth|cnt_l[3]~49, counter_10:cnt_tpth|cnt_l[0], working, counter_10:cnt_tpth|cnt_l[2], counter_10:cnt_tpth|cnt_l[1], mode, counter_10:cnt_tpth|cnt_l[3], counter_10:cnt_tph|co, clr                                                                                                                                                          ; counter_10:cnt_tpth|cnt_l[3], lg6[3]~55, counter_10:cnt_tpth|cnt_l[1]                                                                                                                                                                                                                          ;
+;  H  ; LC117      ; mode, counter_10:cnt_tph|cnt_l[0], counter_10:cnt_tph|cnt_l[1], working, counter_10:cnt_tpt|co, clr                                                                                                                                                                                                                                                         ; lg5[2]~49, counter_10:cnt_tph|cnt_l[3], counter_10:cnt_tph|co, counter_10:cnt_tph|cnt_l[1], counter_10:cnt_tph|cnt_l[3]~49                                                                                                                                                                     ;
+;  H  ; LC125      ; counter_10:cnt_tpth|cnt_l[2], counter_10:cnt_tpth|cnt_l[3], counter_10:cnt_tpth|cnt_l[1], mode, working, counter_10:cnt_tpth|cnt_l[0], counter_10:cnt_tph|co, clr                                                                                                                                                                                           ; counter_10:cnt_tpth|cnt_l[2], counter_10:cnt_tpth|cnt_l[3], counter_10:cnt_tpth|cnt_l[1], lg6[1]~59, counter_10:cnt_tpth|cnt_l[3]~49                                                                                                                                                           ;
+;  H  ; LC120      ; counter_10:cnt_tph|cnt_l[0], counter_10:cnt_tph|cnt_l[1], counter_10:cnt_tph|cnt_l[2], counter_10:cnt_tph|cnt_l[3], clr, mode, working, counter_10:cnt_tph|co, counter_10:cnt_tpt|co                                                                                                                                                                        ; counter_10:cnt_tph|co, counter_10:cnt_tpth|cnt_l[0], counter_10:cnt_tpth|cnt_l[2], counter_10:cnt_tpth|cnt_l[3], counter_10:cnt_tpth|cnt_l[1]                                                                                                                                                  ;
+;  H  ; LC121      ; counter_10:cnt_tph|cnt_l[2], counter_10:cnt_tph|cnt_l[3], counter_10:cnt_tph|cnt_l[1], mode, working, counter_10:cnt_tph|cnt_l[0], counter_10:cnt_tpt|co, clr                                                                                                                                                                                               ; counter_10:cnt_tph|cnt_l[2], counter_10:cnt_tph|cnt_l[3], counter_10:cnt_tph|co, counter_10:cnt_tph|cnt_l[1], lg5[1]~57, counter_10:cnt_tph|cnt_l[3]~49                                                                                                                                        ;
++-----+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Fitter Device Options                                         ;
++----------------------------------------------+----------------+
+; Option                                       ; Setting        ;
++----------------------------------------------+----------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off            ;
+; Enable device-wide reset (DEV_CLRn)          ; Off            ;
+; Enable device-wide output enable (DEV_OE)    ; Off            ;
+; Enable INIT_DONE output                      ; Off            ;
+; Configuration scheme                         ; Passive Serial ;
+; Security bit                                 ; Off            ;
+; Base pin-out file on sameframe device        ; Off            ;
++----------------------------------------------+----------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Jun 06 22:01:01 2023
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off fillpills -c fillpills
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Selected device EPM7128SLC84-15 for design "fillpills"
+Info: Quartus II Fitter was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 215 megabytes
+    Info: Processing ended: Tue Jun 06 22:01:01 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

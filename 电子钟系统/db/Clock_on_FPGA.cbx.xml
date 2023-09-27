@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Clock_on_FPGA">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Clock_on_FPGA|ctr_module:com_ctr_module|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_rnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Clock_on_FPGA|ctr_module:com_ctr_module|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_rnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Clock_on_FPGA|time_module:com_time_module|counter_60:com_sec|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_3kh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Clock_on_FPGA|time_module:com_time_module|counter_24:com_hour|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_3kh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Clock_on_FPGA|time_module:com_time_module|counter_60:com_min|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_3kh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
